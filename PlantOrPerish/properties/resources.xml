@@ -162,7 +162,7 @@
 <Image id="PRESENTOPEN" path="PresentOpen" />
 <Image id="SUNFLOWER_TROPHY" path="Sunflower_trophy" cols="2" />
 <Image id="SLOTMACHINE_OVERLAY" path="SlotMachine_Overlay" />
-<Image id="SCARY_POT" path="Scary_Pot" cols="3" rows="2" />
+<Image id="SCARY_POT" path="Scary_Pot" cols="10" rows="2" />
 <Image id="BUG_SPRAY" path="bug_spray" />
 <Image id="PLANTSPEECHBUBBLE" path="plantspeechbubble" />
 <Image id="WATERDROP" path="waterdrop" />
@@ -214,6 +214,12 @@
 <Image id="ICETRAP_PARTICLES" path="icetrap_particles" cols="4" />
 <Image id="SQUIRREL" path="Squirrel" />
 <Image id="UNSODDED2" path="unsodded2" />
+<Image id="POOLLAVABASE" path="pool_base_lava" minsubdivide="" alphagrid="pool_base_"/>
+<Image id="POOLLAVASHADING" path="pool_shading_lava" alphagrid="pool_shading_" minsubdivide=""/>
+<Image id="POOLLAVA" path="pool_lava" />
+<Image id="BORGER" path="ZombieBarbecue_patty2" />
+<Image id="OUKALL" path="ukall" />
+
 
 <!-- Zombies -->
 <Image id="ZOMBIE_BOBSLED1" path="Zombie_bobsled1" />
@@ -267,7 +273,7 @@
 <Image id="ZOMBIE_BOSS_ICEBALL_GROUNDPARTICLES" path="Zombie_boss_iceball_groundparticles" cols="4" />
 <Image id="DOOMSHROOM_EXPLOSION_BASE" path="DoomShroom_Explosion_Base" cols="3" />
 <Image id="RAIN" path="Rain" />
-<Image id="VASE_CHUNKS" path="vase_chunks" cols="9" rows="3" />
+<Image id="VASE_CHUNKS" path="vase_chunks" cols="9" rows="5" />
 <Image id="ZOMBOSS_PARTICLES" path="Zomboss_particles" cols="5" />
 <Image id="AWARDPICKUPGLOW" path="AwardPickupGlow" />
 <Image id="ZOMBIE_SEAWEED" path="Zombie_seaweed" cols="4" />
@@ -585,6 +591,8 @@
 <Sound id="FINALFANFARE" path="finalfanfare" />
 <Sound id="CRAZYDAVESCREAM" path="crazydavescream" />
 <Sound id="CRAZYDAVESCREAM2" path="crazydavescream2" />
+<Sound id="EYECHARGE" path="guaraneyecharge" />
+<Sound id="EYESHOOT" path="guaraneyeshoot" />
 
 </Resources>
 
