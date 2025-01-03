@@ -185,16 +185,16 @@ Pumpcar
 Runs over the zombies, knocking them back
 
 [MAGNET_SHROOM]
-Teleportree Stump
+Teleportree
 
 [MAGNET_SHROOM_TOOLTIP]
-Current WIP plant, please happily ignore
+Sends zombies back to the start, dispersing them into adjacent lanes
 
 [CABBAGE_PULT]
 Mortomato
 
 [CABBAGE_PULT_TOOLTIP]
-Hurls bouncy tomatos
+Hurls bouncy tomatoes
 
 [FLOWER_POT]
 Flower Pot
@@ -203,10 +203,10 @@ Flower Pot
 Lets you plant on the roof
 
 [KERNEL_PULT]
-Kernel-pult
+Egg-pult
 
 [KERNEL_PULT_TOOLTIP]
-Flings corn kernels and butter at zombies
+Flings light-damaging eggs and stinky rotten eggs
 
 [GARLIC]
 Bell Pepper
@@ -720,14 +720,12 @@ Flower Pots let you plant on the roof.
 {FLAVOR}"I'm a pot for planting. Yet I'm also a plant. HAS YOUR MIND EXPLODED YET?"
 
 [KERNEL_PULT_DESCRIPTION]
-Kernel-pults fling corn kernels and butter at zombies.
+Egg-pults fling eggs and rotten eggs at zombies.
 {SHORTLINE}
-{KEYWORD}Damage:{STAT} light (kernel), normal (butter)
+{KEYWORD}Damage:{STAT} light (egg), poisonous (rotten egg)
 {KEYWORD}Range:{STAT} lobbed
-{KEYWORD}Special:{STAT} butter immobilizes zombies
 {SHORTLINE}
-{FLAVOR}Kernel-Pult is the eldest of the Pult brothers. Of the three of them, Kernel is the only one 
-who consistently remembers the others' birthdays. He bugs them about it a little, too.
+{FLAVOR}Egg-pult constantly gets bugged with the question of "What came first, the chicken or the egg-pult?".  Down inside, he knows this question is impossible to answer.
 
 [COFFEE_BEAN_DESCRIPTION]
 Use Coffee Beans to wake up sleeping mushrooms.
@@ -1276,7 +1274,7 @@ I choose... these three!
 {NO_SOUND}{NO_CLICK}The BIG MONEY (r) upgrade lets you earn DOUBLE the money from coins! {SHAKE}
 
 [CRAZY_DAVE_2002]
-{NO_SOUND}{NO_CLICK}Plant these on your fume-shrooms to turn them into gloom-shrooms! Gloom-shrooms do rapid attacks in a small area!
+{NO_SOUND}{NO_CLICK}The Zombi-gone upgrade makes the first zombie take longer to come out!
 
 [CRAZY_DAVE_2003]
 {NO_SOUND}{NO_CLICK}Plant these on your lily pads to turn them into cattails! Cattails can attack any lane and take down balloon zombies!
@@ -1448,11 +1446,10 @@ Why'd I put a wall-nut in your hand?{MOUTH_SMALL_OH}
 NOW GO! BOWL ME A WINNER!{MOUTH_BIG_SMILE} {SCREAM}
 
 [CRAZY_DAVE_2500]
-Me and my buddy Harvey Flaxcaster used to break vases when we were bored.
+What? Who turned off the lights??
 [CRAZY_DAVE_2501]
-Well Harvey's outta town, so you're coming with me, Harvey #2!
-[CRAZY_DAVE_2502]
-BREAK IT LIKE YOU MEAN IT, HARVEY! {SCREAM}
+Well, it seems to be past my bedtime so you're gonna have to fend off the incoming zombies!
+
 
 [CRAZY_DAVE_2600]
 Hey, welcome to the Zen Garden section of my shop!
