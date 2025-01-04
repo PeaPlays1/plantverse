@@ -212,7 +212,7 @@ Flings light-damaging eggs and stinky rotten eggs
 Bell Pepper
 
 [GARLIC_TOOLTIP]
-Rings bell striking all zombies in a 5x5 area
+Rings bell striking all zombies in a 7x5 area
 
 
 [UMBRELLA_LEAF]
