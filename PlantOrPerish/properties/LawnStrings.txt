@@ -107,10 +107,10 @@ Squash
 Squashes zombies
 
 [THREEPEATER]
-Threepeater
+King-shroom
 
 [THREEPEATER_TOOLTIP]
-Shoots peas in three lanes
+Boosts all plants for 5 seconds
 
 [TANGLE_KELP]
 Tangle Kelp
@@ -185,10 +185,10 @@ Pumpkin
 Protects plants that are within its shell
 
 [MAGNET_SHROOM]
-Shine-Rock
+Sundrop
 
 [MAGNET_SHROOM_TOOLTIP]
-Increases sun drop rate temporarily
+Increases sun drop rate from the sky temporarily
 
 [CABBAGE_PULT]
 Ganneteer
@@ -224,7 +224,7 @@ Protects nearby plants from bungees and catapults
 Money Tree
 
 [MARIGOLD_TOOLTIP]
-Shakes to give two gold coins
+Shakes to give two zombucks
 
 [MELON_PULT]
 Melon-pult
@@ -574,13 +574,12 @@ Squashes will smash the first zombie that gets close to it.
 {FLAVOR}"I'm ready!" yells Squash. "Let's do it! Put me in! There's nobody better! I'm your guy! C'mon! Whaddya waiting for? I need this!"
 
 [THREEPEATER_DESCRIPTION]
-Threepeaters shoot peas in three lanes.
+King-shrooms boost all plants on the lawn for 5 seconds.
 {SHORTLINE}
-{KEYWORD}Damage:{STAT} normal (for each pea)
-{KEYWORD}Range:{STAT} three lanes
+{KEYWORD}Boost:{STAT} fast
+{KEYWORD}Range:{STAT} whole board
 {SHORTLINE}
-{FLAVOR}Threepeater likes reading, backgammon and long periods of immobility in the park. Threepeater enjoys 
-going to shows, particularly modern jazz. "I'm just looking for that special someone," he says. Threepeater's favorite number is 5.
+{FLAVOR}When asked if King-shroom would be a better king than the world-famous "King Bob", King-shroom refused to answer. What could be stopping him? Is the sheer power of "King Bob" destroying the fabric of time?
 
 [TANGLE_KELP_DESCRIPTION]
 Tangle Kelp are aquatic plants that pull the first zombie that nears them underwater.
