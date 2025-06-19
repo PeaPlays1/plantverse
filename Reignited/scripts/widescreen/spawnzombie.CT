@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="45">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>0</ID>
+      <Description>"SpawnZombie"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+//place your code here
+cmp [ecx+7F8],0
+jne originalcode
+push eax
+mov eax,[6a9ec0]
+mov eax,[eax+768]
+cmp [eax+5550],6
+pop eax
+jne originalcode
+pushad
+push 2
+push 0
+mov eax,[6a9ec0]
+mov eax,[eax+768]
+call 40DDC0
+mov [eax+34],(float)0
+
+
+
+
+mov [eax+84],(float)500
+
+mov [eax+2C],(float)300
+
+mov ecx,[eax+118]
+mov eax,[6a9ec0]
+call 453CB0
+
+push [00700268]
+mov ecx,eax
+mov ebx,ecx
+mov eax,str1
+call 473490
+
+push -1
+push str2
+push ebx
+call 473490
+
+push -1
+push str3
+push ebx
+call 473490
+
+push -1
+push str4
+push ebx
+call 473490
+
+push -1
+push str5
+push ebx
+call 473490
+
+push -1
+push str6
+push ebx
+call 473490
+
+popad
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+originalcode:
+mov eax,[esi]
+mov eax,[eax+000007F8]
+
+exit:
+jmp returnhere
+
+str1:
+db 'Zombie_outerleg_upper' 00
+
+
+str2:
+db 'Zombie_tie' 00
+
+str3:
+db 'anim_hair' 00
+
+str4:
+db 'anim_head2' 00
+
+str5:
+db 'Zombie_body' 00
+
+str6:
+db 'Zombie_outerarm_lower' 00
+
+
+42692E:
+jmp newmem
+nop 3
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+42692E:
+db 8B 06 8B 80 F8 07 00 00
+//mov eax,[esi]
+//mov eax,[eax+000007F8]
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>1</ID>
+      <Description>"Auto Assemble script"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+//place your code here
+cmp [esi+24],0
+jne originalcode
+cmp [esi+84],0
+jle originalcode
+fld dword ptr [esi+120]
+fsub qword ptr [fl]
+fst dword ptr [esi+120]
+fadd dword ptr [esi+84]
+fstp dword ptr [esi+84]
+mov [esi+34],(float)0
+pushad
+call 52F050
+popad
+
+
+
+
+
+originalcode:
+jmp 007946C2
+
+exit:
+jmp returnhere
+
+fl:
+dq (double)0.05
+
+52B174:
+jmp newmem
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+52B174:
+db E9 49 95 26 00
+//jmp 007946C2
+</AssemblerScript>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>

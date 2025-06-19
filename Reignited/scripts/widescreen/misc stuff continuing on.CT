@@ -1,0 +1,1287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="42">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>0</ID>
+      <Description>"1"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>Byte</VariableType>
+      <Address>44AF9C</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>1</ID>
+      <Description>"Auto Assemble script"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+
+
+
+
+pushad
+mov eax,[6a9ec0]
+mov eax,[eax+82C]
+mov eax,[eax+24]
+mov ecx,eax
+sub ecx,1
+imul ecx,2
+mov [level],ecx
+
+
+mov eax,ecx
+call convertNumberToDecimal
+
+mov byte [level],al
+mov byte [level2],dl
+mov byte [end],'%'
+
+cmp ecx,1
+jne poop
+mov [level2],'%'
+
+poop:
+
+mov eax,[6a9ec0]
+call 454190
+cmp al,1
+je poop2
+mov [level],'100%'
+
+
+
+
+
+
+
+poop2:
+popad
+
+
+
+
+
+
+
+
+
+
+originalcode:
+push start
+
+exit:
+jmp returnhere
+
+
+
+
+start:
+db 'ADVENTURE PROGRESS: '
+level:
+db 30
+level2:
+db 30
+end:
+db '%' 00 00 00 00 00
+
+
+
+
+
+
+
+convertNumberToDecimal: //returns: eax (10s) edx (1s) ecx (num digits)
+
+cdq
+mov ecx,0A
+xor edx,edx
+idiv ecx
+add eax,30
+add edx,30
+mov ecx,2
+
+cmp eax,30
+jne return
+mov eax,edx
+
+
+mov ecx,1
+
+
+
+
+return:
+ret
+
+
+
+
+
+
+
+44B03A:
+jmp newmem
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+44B03A:
+push 00658AEC
+//Alt: db 68 EC 8A 65 00
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>5</ID>
+      <Description>"shake bushes"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+//place your code here
+cmp [esi+28],E
+je originalcode
+cmp [esi+60],1
+jne originalcode
+
+mov eax,[esi+1C]
+mov [006FFFE8],eax
+
+
+push eax
+mov eax,[6a9ec0]
+cmp [eax+7FC],3
+pop eax
+jne exit
+
+pushad
+mov eax,[6a9ec0]
+mov eax,[eax+768]
+call reanim
+popad
+
+end:
+jmp originalcode
+
+
+track:
+db 'anim_rustle' 00
+
+
+val:
+dd (float)100
+
+val2:
+dd (float)0
+
+
+reanim:
+
+
+
+
+
+sub esp,0A
+lea esi,[esp]
+mov [esi],00
+next5:
+mov eax,[6a9ec0]
+mov eax,[eax+768]
+add [700000],1
+call 41CB90//zombie
+test al,al
+je next2
+mov ebx,[esi]
+cmp [ebx+0],65
+je yar
+cmp [ebx+0],66
+je yar
+cmp [ebx+0],7A
+jge yar
+jmp next3
+
+yar:
+mov edx,[ebx+68]
+sub edx,#303000
+pushad
+mov eax,edx
+cdq
+mov ecx,#10000
+idiv ecx
+sub eax,1
+mov [6ffff8],eax
+popad
+mov edx,[6fffe8]
+cmp [6ffff8],edx
+
+
+jne next3
+
+/*fld dword ptr [ebx+38]
+fdiv dword ptr [val]
+fistp dword ptr [val2]
+mov edx,[6fffe8]
+sub edx,1
+cmp [val],edx
+jne next3*/
+
+
+
+
+
+
+mov [ebx+10],3
+mov [ebx+8],(float)12
+pushad
+push track
+mov ecx,ebx
+call 473280
+popad
+jmp next3
+
+next3:
+jmp next5
+next2:
+add esp,0A
+xor al,al
+ret
+res2:
+add esp,A
+mov al,1
+ret
+
+
+
+
+originalcode:
+cmp dword ptr [esi+24],03
+jne 52B180
+
+exit:
+jmp returnhere
+
+52B174:
+jmp newmem
+nop
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+52B174:
+db 83 7E 24 03 75 06
+//cmp dword ptr [esi+24],03
+//jne PlantsVsZombies.exe+12B180
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>7</ID>
+      <Description>"129"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>Byte</VariableType>
+      <Address>00794977</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>8</ID>
+      <Description>"130"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>Byte</VariableType>
+      <Address>00794A2F</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>4</ID>
+      <Description>"init bushes"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+/*pushad
+mov ecx,[700000]
+mov eax,[6a9ec0]
+call 453CB0
+mov edx,eax
+mov eax,[6a9ec0]
+call 453CF0
+popad
+pushad
+mov ecx,[700010]
+mov eax,[6a9ec0]
+call 453CB0
+mov edx,eax
+mov eax,[6a9ec0]
+call 453CF0
+popad
+pushad
+mov ecx,[700020]
+mov eax,[6a9ec0]
+call 453CB0
+mov edx,eax
+mov eax,[6a9ec0]
+call 453CF0
+popad
+pushad
+mov ecx,[700030]
+mov eax,[6a9ec0]
+call 453CB0
+mov edx,eax
+mov eax,[6a9ec0]
+call 453CF0
+popad
+pushad
+mov ecx,[700040]
+mov eax,[6a9ec0]
+call 453CB0
+mov edx,eax
+mov eax,[6a9ec0]
+call 453CF0
+popad*/
+push eax
+mov eax,[6a9ec0]
+mov eax,[eax+768]
+mov eax,[eax+554C]
+cmp eax,4
+pop eax
+jg originalcode
+
+
+
+
+
+
+
+pushad
+mov eax,[6a9ec0]
+mov eax,[eax+768]
+call 41C010
+cmp al,1
+popad
+je night
+
+
+
+day:
+
+pushad
+mov eax,[6a9ec0]
+mov eax,[eax+768]
+call 41C0B0
+cmp al,1
+popad
+je roof
+
+
+pushad
+mov eax,[6a9ec0]
+mov eax,[eax+768]
+call 41C0D0
+cmp al,1
+popad
+je pool
+
+
+
+
+pushad
+mov ebx,#130
+push #313000
+push (float)0
+push (float)695
+mov eax,[6a9ec0]
+call 453C30
+pushad
+mov ecx,eax
+push char
+call 473280
+popad
+
+
+
+mov [eax+8],(float)0
+mov [eax+10],0
+mov ebx,[eax+9C]
+mov [00700000],ebx
+popad
+
+
+pushad
+mov ebx,#129
+push #323000
+push (float)100
+push (float)698
+mov eax,[6a9ec0]
+call 453C30
+
+pushad
+mov ecx,eax
+push char
+call 473280
+popad
+
+
+mov [eax+8],(float)0
+mov [eax+10],0
+
+
+mov ebx,[eax+9C]
+mov [00700010],ebx
+
+popad
+
+
+
+pushad
+mov ebx,65
+push #333000
+push (float)200
+push (float)684
+mov eax,[6a9ec0]
+call 453C30
+
+pushad
+mov ecx,eax
+push char
+call 473280
+popad
+
+
+mov [eax+8],(float)0
+mov [eax+10],0
+
+mov [eax+18],2
+
+mov ebx,[eax+9C]
+mov [00700020],ebx
+
+popad
+
+pushad
+mov ebx,#130
+push #343000
+push (float)300
+push (float)680
+mov eax,[6a9ec0]
+call 453C30
+
+pushad
+mov ecx,eax
+push char
+call 473280
+popad
+
+
+mov [eax+8],(float)0
+mov [eax+10],0
+
+
+mov ebx,[eax+9C]
+mov [00700030],ebx
+
+popad
+
+pushad
+mov ebx,#129
+push #353000
+push (float)400
+push (float)699
+mov eax,[6a9ec0]
+call 453C30
+pushad
+mov ecx,eax
+push char
+call 473280
+popad
+mov [eax+8],(float)0
+mov [eax+10],0
+
+
+mov ebx,[eax+9C]
+mov [00700040],ebx
+
+
+popad
+jmp originalcode
+
+
+
+
+pool:
+pushad
+mov ebx,#130
+push #313000
+push (float)0
+push (float)695
+mov eax,[6a9ec0]
+call 453C30
+
+pushad
+mov ecx,eax
+push char
+call 473280
+popad
+
+
+mov [eax+8],(float)0
+mov [eax+10],0
+mov ebx,[eax+9C]
+mov [00700000],ebx
+popad
+
+
+pushad
+mov ebx,#129
+push #323000
+push (float)80
+push (float)695
+mov eax,[6a9ec0]
+call 453C30
+
+pushad
+mov ecx,eax
+push char
+call 473280
+popad
+
+mov [eax+8],(float)0
+mov [eax+10],0
+mov ebx,[eax+9C]
+mov [00700010],ebx
+popad
+
+
+pushad
+mov ebx,65
+push #333000
+push (float)160
+push (float)695
+mov eax,[6a9ec0]
+call 453C30
+
+pushad
+mov ecx,eax
+push char
+call 473280
+popad
+
+
+mov [eax+8],(float)0
+mov [eax+10],0
+mov [eax+18],2
+mov ebx,[eax+9C]
+mov [00700020],ebx
+popad
+
+
+
+pushad
+mov ebx,#130
+push #343000
+push (float)240
+push (float)695
+mov eax,[6a9ec0]
+call 453C30
+
+pushad
+mov ecx,eax
+push char
+call 473280
+popad
+
+
+mov [eax+8],(float)0
+mov [eax+10],0
+mov ebx,[eax+9C]
+mov [00700030],ebx
+popad
+
+
+
+pushad
+mov ebx,65
+push #353000
+push (float)320
+push (float)695
+mov eax,[6a9ec0]
+call 453C30
+
+pushad
+mov ecx,eax
+push char
+call 473280
+popad
+
+
+
+mov [eax+8],(float)0
+mov [eax+10],0
+mov ebx,[eax+9C]
+mov [00700040],ebx
+popad
+
+
+pushad
+mov ebx,#130
+push #363000
+push (float)400
+push (float)695
+mov eax,[6a9ec0]
+call 453C30
+
+pushad
+mov ecx,eax
+push char
+call 473280
+popad
+
+
+
+mov [eax+8],(float)0
+mov [eax+10],0
+mov ebx,[eax+9C]
+mov [00700050],ebx
+popad
+
+jmp originalcode
+
+
+
+
+
+
+night:
+pushad
+mov eax,[6a9ec0]
+mov eax,[eax+768]
+call 41C0B0
+cmp al,1
+popad
+je originalcode
+
+pushad
+mov eax,[6a9ec0]
+mov eax,[eax+768]
+call 41C0D0
+cmp al,1
+popad
+je fog
+
+
+
+
+pushad
+mov ebx,66
+push #313000
+push (float)0
+push (float)695
+mov eax,[6a9ec0]
+call 453C30
+mov [eax+8],(float)0
+mov [eax+10],0
+mov ebx,[eax+9C]
+mov [00700000],ebx
+popad
+pushad
+mov ebx,66
+push #323000
+push (float)100
+push (float)695
+mov eax,[6a9ec0]
+call 453C30
+mov [eax+8],(float)0
+mov [eax+10],0
+
+
+mov ebx,[eax+9C]
+mov [00700010],ebx
+
+popad
+pushad
+mov ebx,66
+push #333000
+push (float)200
+push (float)695
+mov eax,[6a9ec0]
+call 453C30
+mov [eax+8],(float)0
+mov [eax+10],0
+
+mov [eax+18],2
+
+mov ebx,[eax+9C]
+mov [00700020],ebx
+
+popad
+
+pushad
+mov ebx,66
+push #343000
+push (float)300
+push (float)695
+mov eax,[6a9ec0]
+call 453C30
+mov [eax+8],(float)0
+mov [eax+10],0
+
+
+mov ebx,[eax+9C]
+mov [00700030],ebx
+
+popad
+
+pushad
+mov ebx,66
+push #353000
+push (float)400
+push (float)695
+mov eax,[6a9ec0]
+call 453C30
+mov [eax+8],(float)0
+mov [eax+10],0
+
+
+mov ebx,[eax+9C]
+mov [00700040],ebx
+
+
+popad
+jmp originalcode
+
+
+
+fog:
+pushad
+mov ebx,66
+push #313000
+push (float)0
+push (float)695
+mov eax,[6a9ec0]
+call 453C30
+mov [eax+8],(float)0
+mov [eax+10],0
+mov ebx,[eax+9C]
+mov [00700000],ebx
+popad
+
+
+pushad
+mov ebx,66
+push #323000
+push (float)80
+push (float)695
+mov eax,[6a9ec0]
+call 453C30
+mov [eax+8],(float)0
+mov [eax+10],0
+mov ebx,[eax+9C]
+mov [00700010],ebx
+popad
+
+
+pushad
+mov ebx,66
+push #333000
+push (float)160
+push (float)695
+mov eax,[6a9ec0]
+call 453C30
+mov [eax+8],(float)0
+mov [eax+10],0
+mov [eax+18],2
+mov ebx,[eax+9C]
+mov [00700020],ebx
+popad
+
+
+
+pushad
+mov ebx,66
+push #343000
+push (float)240
+push (float)695
+mov eax,[6a9ec0]
+call 453C30
+mov [eax+8],(float)0
+mov [eax+10],0
+mov ebx,[eax+9C]
+mov [00700030],ebx
+popad
+
+
+
+pushad
+mov ebx,66
+push #353000
+push (float)320
+push (float)695
+mov eax,[6a9ec0]
+call 453C30
+mov [eax+8],(float)0
+mov [eax+10],0
+mov ebx,[eax+9C]
+mov [00700040],ebx
+popad
+
+
+pushad
+mov ebx,66
+push #363000
+push (float)400
+push (float)695
+mov eax,[6a9ec0]
+call 453C30
+mov [eax+8],(float)0
+mov [eax+10],0
+mov ebx,[eax+9C]
+mov [00700050],ebx
+popad
+
+
+
+
+roof:
+pushad
+mov ebx,65
+push #363000
+push (float)0
+push (float)625
+mov eax,[6a9ec0]
+call 453C30
+
+
+
+mov [eax+8],(float)0
+mov [eax+10],0
+mov ebx,[eax+9C]
+mov [00700000],ebx
+
+push track
+mov ecx,eax
+call 473280
+
+popad
+
+
+
+
+
+
+
+originalcode:
+cmp dword ptr [esi+000007F8],00
+
+exit:
+jmp returnhere
+
+track:
+db 'anim_pole' 00
+
+char:
+db 'anim_rustle' 00
+
+43AB79:
+jmp newmem
+nop 2
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+43AB79:
+db 83 BE F8 07 00 00 00
+//cmp dword ptr [esi+000007F8],00
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>10</ID>
+      <Description>"make zombies appear farther"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+originalcode:
+//xor esi,esi
+mov esi,2
+jmp 004394E4
+nop 
+
+exit:
+jmp returnhere
+
+4394DB:
+jmp newmem
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+4394DB:
+xor esi,esi
+jmp 004394E4
+nop 
+//Alt: db 33 F6 EB 05 90
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>11</ID>
+      <Description>"7"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>Byte</VariableType>
+      <Address>0043952A</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>12</ID>
+      <Description>"random pos if fail"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+//place your code here
+push eax
+mov eax,5
+call 5af400
+mov [007001C0],eax
+pop eax
+push eax
+mov eax,5
+call 5af400
+mov [007001C4],eax
+pop eax
+
+
+originalcode:
+push ebx
+mov ebx,[007001C0]
+mov [eax],ebx
+mov ebx,[007001C4]
+mov [ecx],ebx
+pop ebx
+jmp 00439552
+
+exit:
+jmp returnhere
+
+439546:
+jmp newmem
+nop
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+439546:
+mov [eax],00000002
+//Alt: db C7 00 02 00 00 00
+</AssemblerScript>
+    </CheatEntry>
+  </CheatEntries>
+  <CheatCodes>
+    <CodeEntry>
+      <Description>Change of mov [esi+08],eax</Description>
+      <AddressString>PlantsVsZombies.exe+6DD16</AddressString>
+      <Before>
+        <Byte>46</Byte>
+        <Byte>38</Byte>
+        <Byte>D8</Byte>
+        <Byte>46</Byte>
+        <Byte>34</Byte>
+      </Before>
+      <Actual>
+        <Byte>89</Byte>
+        <Byte>46</Byte>
+        <Byte>08</Byte>
+      </Actual>
+      <After>
+        <Byte>E8</Byte>
+        <Byte>B2</Byte>
+        <Byte>BA</Byte>
+        <Byte>1C</Byte>
+        <Byte>00</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of mov [esi+0C],eax</Description>
+      <AddressString>PlantsVsZombies.exe+6DD1E</AddressString>
+      <Before>
+        <Byte>E8</Byte>
+        <Byte>B2</Byte>
+        <Byte>BA</Byte>
+        <Byte>1C</Byte>
+        <Byte>00</Byte>
+      </Before>
+      <Actual>
+        <Byte>89</Byte>
+        <Byte>46</Byte>
+        <Byte>0C</Byte>
+      </Actual>
+      <After>
+        <Byte>5F</Byte>
+        <Byte>83</Byte>
+        <Byte>C4</Byte>
+        <Byte>08</Byte>
+        <Byte>C3</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of mov eax,[ecx+0000008C]</Description>
+      <AddressString>PlantsVsZombies.exe+1C1C0</AddressString>
+      <Before>
+        <Byte>CC</Byte>
+        <Byte>CC</Byte>
+        <Byte>CC</Byte>
+        <Byte>CC</Byte>
+        <Byte>CC</Byte>
+      </Before>
+      <Actual>
+        <Byte>8B</Byte>
+        <Byte>81</Byte>
+        <Byte>8C</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Actual>
+      <After>
+        <Byte>8B</Byte>
+        <Byte>80</Byte>
+        <Byte>F8</Byte>
+        <Byte>07</Byte>
+        <Byte>00</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of mov eax,[ecx+0000008C]</Description>
+      <AddressString>PlantsVsZombies.exe+1C1C0</AddressString>
+      <Before>
+        <Byte>CC</Byte>
+        <Byte>CC</Byte>
+        <Byte>CC</Byte>
+        <Byte>CC</Byte>
+        <Byte>CC</Byte>
+      </Before>
+      <Actual>
+        <Byte>8B</Byte>
+        <Byte>81</Byte>
+        <Byte>8C</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Actual>
+      <After>
+        <Byte>8B</Byte>
+        <Byte>80</Byte>
+        <Byte>F8</Byte>
+        <Byte>07</Byte>
+        <Byte>00</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of mov [esi+08],eax</Description>
+      <AddressString>PlantsVsZombies.exe+6DD16</AddressString>
+      <Before>
+        <Byte>46</Byte>
+        <Byte>38</Byte>
+        <Byte>D8</Byte>
+        <Byte>46</Byte>
+        <Byte>34</Byte>
+      </Before>
+      <Actual>
+        <Byte>89</Byte>
+        <Byte>46</Byte>
+        <Byte>08</Byte>
+      </Actual>
+      <After>
+        <Byte>E8</Byte>
+        <Byte>B2</Byte>
+        <Byte>BA</Byte>
+        <Byte>1C</Byte>
+        <Byte>00</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of mov [esi+0C],eax</Description>
+      <AddressString>PlantsVsZombies.exe+6DD1E</AddressString>
+      <Before>
+        <Byte>E8</Byte>
+        <Byte>B2</Byte>
+        <Byte>BA</Byte>
+        <Byte>1C</Byte>
+        <Byte>00</Byte>
+      </Before>
+      <Actual>
+        <Byte>89</Byte>
+        <Byte>46</Byte>
+        <Byte>0C</Byte>
+      </Actual>
+      <After>
+        <Byte>5F</Byte>
+        <Byte>83</Byte>
+        <Byte>C4</Byte>
+        <Byte>08</Byte>
+        <Byte>C3</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of jne 00481C9A</Description>
+      <AddressString>PlantsVsZombies.exe+81BDA</AddressString>
+      <Before>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>FF</Byte>
+        <Byte>FF</Byte>
+      </Before>
+      <Actual>
+        <Byte>0F</Byte>
+        <Byte>85</Byte>
+        <Byte>BA</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Actual>
+      <After>
+        <Byte>81</Byte>
+        <Byte>C6</Byte>
+        <Byte>EC</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of mov [esi+08],eax</Description>
+      <AddressString>PlantsVsZombies.exe+6DD16</AddressString>
+      <Before>
+        <Byte>46</Byte>
+        <Byte>38</Byte>
+        <Byte>D8</Byte>
+        <Byte>46</Byte>
+        <Byte>34</Byte>
+      </Before>
+      <Actual>
+        <Byte>89</Byte>
+        <Byte>46</Byte>
+        <Byte>08</Byte>
+      </Actual>
+      <After>
+        <Byte>E8</Byte>
+        <Byte>B2</Byte>
+        <Byte>BA</Byte>
+        <Byte>1C</Byte>
+        <Byte>00</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of mov [esi+0C],eax</Description>
+      <AddressString>PlantsVsZombies.exe+6DD1E</AddressString>
+      <Before>
+        <Byte>E8</Byte>
+        <Byte>B2</Byte>
+        <Byte>BA</Byte>
+        <Byte>1C</Byte>
+        <Byte>00</Byte>
+      </Before>
+      <Actual>
+        <Byte>89</Byte>
+        <Byte>46</Byte>
+        <Byte>0C</Byte>
+      </Actual>
+      <After>
+        <Byte>5F</Byte>
+        <Byte>83</Byte>
+        <Byte>C4</Byte>
+        <Byte>08</Byte>
+        <Byte>C3</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of mov [esi+08],eax</Description>
+      <AddressString>PlantsVsZombies.exe+6DD16</AddressString>
+      <Before>
+        <Byte>46</Byte>
+        <Byte>38</Byte>
+        <Byte>D8</Byte>
+        <Byte>46</Byte>
+        <Byte>34</Byte>
+      </Before>
+      <Actual>
+        <Byte>89</Byte>
+        <Byte>46</Byte>
+        <Byte>08</Byte>
+      </Actual>
+      <After>
+        <Byte>E8</Byte>
+        <Byte>B2</Byte>
+        <Byte>BA</Byte>
+        <Byte>1C</Byte>
+        <Byte>00</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of mov [esi+0C],eax</Description>
+      <AddressString>PlantsVsZombies.exe+6DD1E</AddressString>
+      <Before>
+        <Byte>E8</Byte>
+        <Byte>B2</Byte>
+        <Byte>BA</Byte>
+        <Byte>1C</Byte>
+        <Byte>00</Byte>
+      </Before>
+      <Actual>
+        <Byte>89</Byte>
+        <Byte>46</Byte>
+        <Byte>0C</Byte>
+      </Actual>
+      <After>
+        <Byte>5F</Byte>
+        <Byte>83</Byte>
+        <Byte>C4</Byte>
+        <Byte>08</Byte>
+        <Byte>C3</Byte>
+      </After>
+    </CodeEntry>
+  </CheatCodes>
+  <UserdefinedSymbols/>
+</CheatTable>

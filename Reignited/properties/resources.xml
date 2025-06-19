@@ -92,7 +92,7 @@
 <Image id="SEEDPACKETSILHOUETTE" path="SeedPacketSilhouette" />
 <Image id="FLAGMETER" path="FlagMeter" rows="2" minsubdivide="" />
 <Image id="FLAGMETERLEVELPROGRESS" path="FlagMeterLevelProgress" />
-<Image id="FLAGMETERPARTS" path="FlagMeterParts" cols="3" />
+<Image id="FLAGMETERPARTS" path="FlagMeterParts" cols="6" />
 <Image id="TROPHY" path="trophy" />
 <Image id="TROPHY_HI_RES" path="trophy_hi_res" />
 <Image id="MINIGAME_TROPHY" path="Minigame_trophy" />
@@ -194,7 +194,6 @@
 <Image id="POOL" path="pool" minsubdivide="" />
 <Image id="POOL_NIGHT" path="pool_night" minsubdivide="" />
 <Image id="POOL_BASE" path="pool_base" minsubdivide="" />
-<Image id="POOLBASE" path="toxicpool_base" minsubdivide="" alphagrid="pool_base_"/>
 <Image id="POOL_BASE_NIGHT" path="pool_base_night" alphagrid="pool_base_" minsubdivide="" />
 <Image id="POOL_SHADING" path="pool_shading" minsubdivide="" />
 <Image id="POOL_SHADING_NIGHT" path="pool_shading_night" alphagrid="pool_shading_" minsubdivide="" />
@@ -213,30 +212,15 @@
 <Image id="ICETRAP" path="icetrap" />
 <Image id="ICETRAP2" path="icetrap2" />
 <Image id="ICETRAP_PARTICLES" path="icetrap_particles" cols="4" />
-<Image id="SNOW" path="snow"/>
-<Image id="SNOWBG" path="snowbg"/>
-<Image id="TOXIC_OVERLAY" path="ToxicPool_Overlay" alphagrid="pool_shading_" minsubdivide=""/>
-<Image id="TOXICBG" path="toxicbg"/>
-<Image id="DARKFLOWERLASER" path="darkflowerlaser"/>
-<Image id="TACTICALNUKE" path="nukepea"/>
-<Image id="ZOMBIETRAPBG" path="roofTrap"/>
-<Image id="CARPAPER" path="carpaper"/>
-<Image id="METEOR" path="meteor"/>
-<Image id="BG7" path="background7"/>
-<Image id="FOG2" path="fog2"/>
-<Image id="ROOFRED" path="background5meteors"/>
-<Image id="OUKALL" path="ukall"/>
-<Image id="NEW1" path="new1"/>
-<Image id="NEW2" path="new2"/>
-<Image id="NEW3" path="new3"/>
-<Image id="NEW4" path="new4"/>
-<Image id="NEW5" path="new5"/>
-<Image id="NEW6" path="new6"/>
-<Image id="NEW7" path="new7"/>
-<Image id="NEW8" path="new8"/>
-<Image id="NEW9" path="new9"/>
-
-
+<Image id="NEW1" path="new1" />
+<Image id="NEW2" path="new2" />
+<Image id="NEW3" path="new3" />
+<Image id="NEW4" path="new4" />
+<Image id="NEW5" path="new5" />
+<Image id="NEW6" path="new6" />
+<Image id="NEW7" path="new7" />
+<Image id="NEW8" path="new8" />
+<Image id="NEW9" path="new9" />
 
 <!-- Zombies -->
 <Image id="ZOMBIE_BOBSLED1" path="Zombie_bobsled1" />
@@ -295,7 +279,6 @@
 <Image id="PINATA" path="pinata" cols="5" />
 <Image id="ZOMBIEFUTUREGLASSES" path="ZombieFutureGlasses" cols="4" />
 <Image id="DUST_PUFFS" path="Dust_puffs" cols="3" />
-<Image id="ZOMBIEBUNGIHEAD" path="ZombieBungiHead" />
 
 <SetDefaults path="reanim" idprefix="IMAGE_REANIM_" />
   
@@ -607,8 +590,6 @@
 <Sound id="FINALFANFARE" path="finalfanfare" />
 <Sound id="CRAZYDAVESCREAM" path="crazydavescream" />
 <Sound id="CRAZYDAVESCREAM2" path="crazydavescream2" />
-<Sound id="DARKFLOWER" path="darkflower" />
-<Sound id="CAR" path="goofyahhcar" />
 
 </Resources>
 

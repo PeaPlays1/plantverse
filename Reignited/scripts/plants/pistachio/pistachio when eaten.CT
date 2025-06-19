@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="42">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>23</ID>
+      <Description>"Unlock Upgrade Plants Post Adv"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+//place your code here
+pushad
+mov eax,[6a9ec0]
+call 454170
+cmp al,1
+popad
+jne originalcode
+pop esi
+mov al,1
+ret
+
+originalcode:
+cmp dword ptr [edi+000008C0],01
+
+exit:
+jmp returnhere
+
+453B3D:
+jmp newmem
+nop 2
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+453B3D:
+cmp dword ptr [edi+000008C0],01
+//Alt: db 83 BF C0 08 00 00 01
+</AssemblerScript>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>24</ID>
+      <Description>"scripts"</Description>
+      <Options moActivateChildrenAsWell="1" moDeactivateChildrenAsWell="1"/>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>0</ID>
+          <Description>"pistachio"</Description>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+00796D7E: //this is allocated memory, you have read,write,execute access
+//place your code here
+cmp [edi+24],3
+jne originalcode
+cmp [edi+40],#100
+jg originalcode
+cmp [edi+3C],7
+je originalcode
+mov [edi+3C],7
+pushad
+push (float)12
+mov ecx,20
+push 3
+push anim
+mov eax,edi
+call 45FD90
+popad
+
+
+
+pushad
+mov ebp,0
+
+
+loop:
+cmp ebp,#16
+jge end
+
+
+pushad
+push 0
+push [edi+1C]
+push [edi+20]
+mov eax,[edi+0C]
+add eax,10
+push eax
+mov eax,[edi+08]
+add eax,15
+push eax
+mov eax,[6a9ec0]
+mov eax,[eax+768]
+call 40D620
+mov [eax+74],1
+mov [eax+58],45
+
+lea edi,[ebp*4+listx]
+mov edi,[edi]
+mov [eax+3C],edi
+
+
+lea edi,[ebp*4+listy]
+mov edi,[edi]
+mov [eax+40],edi
+
+popad
+add ebp,1
+jmp loop
+
+
+
+end:
+popad
+
+
+
+
+//mov [edi+40],#500000
+
+
+
+originalcode:
+cmp ecx,11
+jne 00463279
+
+exit:
+jmp returnhere
+
+anim:
+db 'anim_idle2' 00
+
+
+
+listx:
+dd (float)0 (float)0 (float)1 (float)-1 (float)1 (float)-1 (float)1 (float)-1
+
+dd (float)0.5 (float)0.5 (float)0.5 (float)0.5 (float)-0.5 (float)-0.5 (float)-0.5 (float)-0.5
+
+
+listy:
+dd (float)1 (float)-1 (float)0 (float)0 (float)1 (float)1 (float)-1 (float)-1
+dd (float)0.5 (float)-0.5 (float)0.5 (float)-0.5 (float)0.5 (float)-0.5 (float)0.5 (float)-0.5
+
+
+
+
+463269:
+jmp 00796D7E
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+463269:
+cmp ecx,11
+jne 00463279
+//Alt: db E9 B9 9D 33 00
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>4</ID>
+          <Description>"explodeonut"</Description>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+0079DA30: //this is allocated memory, you have read,write,execute access
+//place your code here
+pushad
+mov ebp,0
+
+
+loop:
+cmp ebp,#16
+jge end
+
+
+pushad
+push 0
+push [edi+1C]
+push [edi+20]
+mov eax,[edi+0C]
+add eax,10
+push eax
+mov eax,[edi+08]
+add eax,15
+push eax
+mov eax,[6a9ec0]
+mov eax,[eax+768]
+call 40D620
+mov [eax+74],1
+mov [eax+58],45
+
+lea edi,[ebp*4+listx]
+mov edi,[edi]
+mov [eax+3C],edi
+
+
+lea edi,[ebp*4+listy]
+mov edi,[edi]
+mov [eax+40],edi
+
+popad
+add ebp,1
+jmp loop
+
+
+
+end:
+popad
+
+pushad
+mov eax,[6a9ec0]
+mov eax,[eax+768]
+mov [eax+5544],12
+mov [eax+5540],12
+popad
+
+originalcode:
+mov ecx,[edi]
+mov eax,[ecx]
+mov edx,[006A79E8]
+
+exit:
+jmp returnhere
+
+listx:
+dd (float)0 (float)0 (float)1 (float)-1 (float)1 (float)-1 (float)1 (float)-1
+
+dd (float)0.5 (float)0.5 (float)0.5 (float)0.5 (float)-0.5 (float)-0.5 (float)-0.5 (float)-0.5
+
+
+listy:
+dd (float)1 (float)-1 (float)0 (float)0 (float)1 (float)1 (float)-1 (float)-1
+dd (float)0.5 (float)-0.5 (float)0.5 (float)-0.5 (float)0.5 (float)-0.5 (float)0.5 (float)-0.5
+
+462E53:
+jmp 0079DA30
+nop 5
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+462E53:
+mov ecx,[edi]
+mov eax,[ecx]
+mov edx,[006A79E8]
+//Alt: db 8B 0F 8B 01 8B 15 E8 79 6A 00
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>21</ID>
+          <Description>"susnut"</Description>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+0079DB44: //this is allocated memory, you have read,write,execute access
+//place your code here
+pushad
+mov ebp,0
+
+
+loop:
+cmp ebp,#16
+jge end
+
+
+pushad
+push 0
+push [edi+1C]
+push [edi+20]
+mov eax,[edi+0C]
+add eax,10
+push eax
+mov eax,[edi+08]
+add eax,15
+push eax
+mov eax,[6a9ec0]
+mov eax,[eax+768]
+call 40D620
+mov [eax+74],1
+mov [eax+58],45
+
+lea edi,[ebp*4+listx]
+mov edi,[edi]
+mov [eax+3C],edi
+
+
+lea edi,[ebp*4+listy]
+mov edi,[edi]
+mov [eax+40],edi
+
+popad
+add ebp,1
+jmp loop
+
+
+
+end:
+popad
+
+
+
+
+originalcode:
+push #1800
+
+exit:
+jmp returnhere
+
+
+
+listx:
+dd (float)0 (float)0 (float)1 (float)-1 (float)1 (float)-1 (float)1 (float)-1
+
+dd (float)0.5 (float)0.5 (float)0.5 (float)0.5 (float)-0.5 (float)-0.5 (float)-0.5 (float)-0.5
+
+
+listy:
+dd (float)1 (float)-1 (float)0 (float)0 (float)1 (float)1 (float)-1 (float)-1
+dd (float)0.5 (float)-0.5 (float)0.5 (float)-0.5 (float)0.5 (float)-0.5 (float)0.5 (float)-0.5
+
+
+462FBC:
+jmp 0079DB44
+returnhere:
+
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+462FBC:
+push #1800
+//Alt: db E9 3F D0 75 00
+</AssemblerScript>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>25</ID>
+      <Description>"4"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>Byte</VariableType>
+      <Address>004098A6</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>26</ID>
+      <Description>"4"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>Byte</VariableType>
+      <Address>00414AE8</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>27</ID>
+      <Description>"127"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>Byte</VariableType>
+      <Address>00464E53</Address>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>

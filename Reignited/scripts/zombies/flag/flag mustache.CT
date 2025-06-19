@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="45">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>2</ID>
+      <Description>"scripts"</Description>
+      <Options moActivateChildrenAsWell="1" moDeactivateChildrenAsWell="1"/>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>0</ID>
+          <Description>"apply mustache"</Description>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+00796ED4: //this is allocated memory, you have read,write,execute access
+//place your code here
+pushad
+mov eax,edi
+push 1
+call 536C90
+popad
+
+
+
+originalcode:
+jmp PlantsVsZombies.Zombie::ZombieInitialize+18CE
+
+exit:
+jmp returnhere
+
+523298:
+jmp 00796ED4
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+523298:
+db E9 B1 0B 00 00
+//jmp PlantsVsZombies.Zombie::ZombieInitialize+18CE
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1</ID>
+          <Description>"custom speed"</Description>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+00796EEA: //this is allocated memory, you have read,write,execute access
+//place your code here
+cmp ecx,1
+jne originalcode
+fld dword ptr [fl]
+jmp 00524C56
+
+
+originalcode:
+//cmp ecx,01
+//je PlantsVsZombies.Zombie::PickRandomSpeed+1E0
+
+exit:
+jmp returnhere
+
+fl:
+dd (float)0.678
+
+524B2A:
+jmp 00796EEA
+nop 4
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+524B2A:
+db 83 F9 01 0F 84 1D 01 00 00
+//cmp ecx,01
+//je PlantsVsZombies.Zombie::PickRandomSpeed+1E0
+</AssemblerScript>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>

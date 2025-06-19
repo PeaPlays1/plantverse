@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="45">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>6</ID>
+      <Description>"Hold To Collect"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+00797397: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+cmp [ebx+58],6
+jg originalcode
+
+
+cmp byte ptr [ebx+50],1
+je originalcode
+
+
+push eax
+mov eax,[6a9ec0]
+mov eax,[eax+320]
+cmp [eax+E8],1
+pop eax
+
+jl originalcode
+
+
+pushad
+
+mov ecx,[6a9ec0]
+mov ecx,[ecx+320]
+mov ecx,[ecx+E4]
+
+
+fld [ebx+28]
+call 6397D0
+
+sub ecx,eax
+
+
+
+
+cmp ecx,0
+jl poopad
+cmp ecx,#70
+jg poopad
+
+mov ecx,[6a9ec0]
+mov ecx,[ecx+320]
+mov ecx,[ecx+E0]
+sub ecx,#134
+
+
+fld [ebx+24]
+call 6397D0
+
+sub ecx,eax
+
+
+
+
+cmp ecx,0
+jl poopad
+cmp ecx,#70
+jg poopad
+
+
+pushad
+mov ecx,ebx
+call 432060
+popad
+
+pushad
+mov edx,ebx
+call 432B00
+popad
+
+
+
+
+
+
+
+
+poopad:
+popad
+
+
+
+
+
+
+
+originalcode:
+add dword ptr [ebx+4C],01
+mov edx,[ebx]
+
+exit:
+jmp returnhere
+
+431506:
+jmp 00797397
+nop
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+431506:
+add dword ptr [ebx+4C],01
+mov edx,[ebx]
+//Alt: db 83 43 4C 01 8B 13
+</AssemblerScript>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>

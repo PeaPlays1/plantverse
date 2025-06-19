@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="42">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>3</ID>
+      <Description>"Fix Packet"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+//place your code here
+cmp ebp,2
+jne originalcode
+    fstp st(2)
+    fstp st(0)
+
+    sub esp,30
+    movups [esp],xmm0
+    movups [esp+10],xmm1
+    movups [esp+20],xmm2
+
+    lea eax,[esp+30]
+
+    movss xmm0,dword ptr [float]
+    movss dword ptr [eax+14],xmm0
+
+    movss xmm1,dword ptr [float3]
+    movss dword ptr [eax+1C],xmm1
+
+    movss xmm2,dword ptr [float2]
+    movss dword ptr [eax+18],xmm2
+
+    movups xmm2,[esp+20]
+    movups xmm1,[esp+10]
+    movups xmm0,[esp]
+    add esp,30
+
+jmp 00487D18
+
+
+originalcode:
+cmp ebp,04
+je 00487CFC
+
+exit:
+jmp returnhere
+
+float:
+db CD CC CC 3E
+
+float2:
+db 00 00 70 41
+
+float3:
+db 00 00 40 41
+
+
+487939:
+jmp newmem
+nop 4
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+487939:
+cmp ebp,04
+je 00487CFC
+//Alt: db 83 FD 04 0F 84 BA 03 00 00
+</AssemblerScript>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>

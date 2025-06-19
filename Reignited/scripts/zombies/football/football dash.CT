@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="45">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>2</ID>
+      <Description>"scripts"</Description>
+      <Options moActivateChildrenAsWell="1" moDeactivateChildrenAsWell="1"/>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>0</ID>
+          <Description>"no eating"</Description>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+007972BB: //this is allocated memory, you have read,write,execute access
+//place your code here
+cmp [ebp+24],7
+jne originalcode
+cmp [ebp+60],#500
+jl originalcode
+cmp [ebp+60],#700
+jl 0052FB8B
+
+
+originalcode:
+jmp 007968B9
+
+exit:
+jmp returnhere
+
+52FB84:
+jmp 007972BB
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+52FB84:
+db E9 30 6D 26 00
+//jmp 007968B9
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1</ID>
+          <Description>"football dash"</Description>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+007972EA: //this is allocated memory, you have read,write,execute access
+//place your code here
+cmp [esi+24],7
+jne originalcode
+cmp [esi+60],#500
+je charge
+cmp [esi+60],#700
+je attack
+jmp originalcode
+
+charge:
+pushad
+mov edi,esi
+call 52F440
+mov [esi+34],(float)0
+call 52F050
+push (float)55
+push 20
+push 0
+push idle
+mov edi,esi
+call 528B00
+popad
+jmp originalcode
+
+
+
+attack:
+pushad
+mov edi,esi
+call 52F440
+push (float)24
+push 0
+push 0
+push walk
+mov edi,esi
+call 528B00
+mov [esi+34],(float)1.5
+call 52F050
+popad
+jmp originalcode
+
+
+
+
+
+
+
+
+
+
+
+originalcode:
+cmp dword ptr [esi+24],16
+jne PlantsVsZombies.Zombie::UpdateActions+7D
+
+exit:
+jmp returnhere
+
+idle:
+db 'anim_idle' 00
+
+walk:
+db 'anim_walk' 00
+
+
+52B180:
+jmp 007972EA
+nop
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+52B180:
+db 83 7E 24 16 75 07
+//cmp dword ptr [esi+24],16
+//jne PlantsVsZombies.Zombie::UpdateActions+7D
+</AssemblerScript>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>

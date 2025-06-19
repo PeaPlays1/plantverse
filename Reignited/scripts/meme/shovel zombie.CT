@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="42">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>3</ID>
+      <Description>"Auto Assemble script"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+//place your code here
+pushad
+call damagezombies6x6
+popad
+
+originalcode:
+mov ebx,00000001
+
+exit:
+jmp returnhere
+
+damagezombies6x6:
+mov edi,[6a9ec0]
+mov edi,[edi+768]
+sub esp,0A
+lea esi,[esp]
+mov [esi],00
+next5:
+call 41C8F0//zombie
+test al,al
+je next2
+mov ebx,[esi]
+mov eax,[6a9ec0]
+mov eax,[eax+768]
+mov ecx,[eax+555C]
+mov eax,[eax+5558]
+sub eax,#134
+mov [006FFDE8],eax
+
+cmp eax,[ebx+8]
+jl next3
+sub eax,50
+cmp eax,[ebx+8]
+jg next3
+
+add ecx,10
+cmp ecx,[ebx+c]
+jl next3
+sub ecx,50//distance
+cmp ecx,[ebx+c]
+jg next3
+
+pushad
+mov ecx,ebx
+call 530510
+popad
+jmp res2
+
+
+
+
+
+next3:
+jmp next5
+next2:
+add esp,0A
+xor al,al
+ret
+res2:
+add esp,A
+mov al,1
+ret
+
+41112E:
+jmp newmem
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+41112E:
+mov ebx,00000001
+//Alt: db BB 01 00 00 00
+</AssemblerScript>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>

@@ -35,10 +35,10 @@ Potato Mine
 Explodes on contact, but takes time to arm itself
 
 [SNOW_PEA]
-Berry Peashooter
+Berry Pea
 
 [SNOW_PEA_TOOLTIP]
-Shoots berry peas that deal splash damage
+Shoots chilled berries that deal splash damage and slow the enemy
 
 [CHOMPER]
 Chomper
@@ -53,10 +53,10 @@ Puff-shroom
 Shoots short-ranged spores at the enemy
 
 [SUN_SHROOM]
-Sungus
+Sun-shroom
 
 [SUN_SHROOM_TOOLTIP]
-Zombies that eat it produce sun over time
+Gives small sun at first and normal sun later
 
 [FUME_SHROOM]
 Fume-shroom
@@ -71,10 +71,10 @@ Grave Buster
 Plant it on a grave to remove the grave
 
 [HYPNO_SHROOM]
-Pecanolith
+Hypno-shroom
 
 [HYPNO_SHROOM_TOOLTIP]
-Summons hypnotised zombies to fight for you
+Makes a zombie fight for you
 
 [SCAREDY_SHROOM]
 Scaredy-shroom
@@ -83,10 +83,10 @@ Scaredy-shroom
 Long-ranged shooter that hides when enemies get near it
 
 [ICE_SHROOM]
-Weaken-shroom
+Ice-shroom
 
 [ICE_SHROOM_TOOLTIP]
-Weakens a zombie, slowing, damaging and taking their abilities
+Temporarily immobilizes all zombies on the screen
 
 [DOOM_SHROOM]
 Doom-shroom
@@ -107,10 +107,10 @@ Squash
 Squashes zombies
 
 [THREEPEATER]
-Robo-Pea
+Threepeater
 
 [THREEPEATER_TOOLTIP]
-Shoots homing peas
+Shoots peas in three lanes
 
 [TANGLE_KELP]
 Tangle Kelp
@@ -134,43 +134,43 @@ Pops tires and hurts zombies that step on it
 Torchwood
 
 [TORCHWOOD_TOOLTIP]
-Peas that pass through it turn into fireballs, does light 3x3 damage
+Peas that pass through it turn into fireballs
 
 [TALL_NUT]
-Wax Gourd
+Tall-nut
 
 [TALL_NUT_TOOLTIP]
-Jumps for damage and knockback
+Heavy-duty wall that can't be vaulted over
 
 [SEA_SHROOM]
-Shine-shroom
+Sea-shroom
 
 [SEA_SHROOM_TOOLTIP]
-The more you place next to each other, the more sun they produce
+Aquatic plant that shoots short-ranged spores
 
 [PLANTERN]
-Spotlight Shroom
+Plantern
 
 [PLANTERN_TOOLTIP]
-Shoots a beam of light down its lane, letting you see through fog
+Lights up an area, letting you see through fog
 
 [CACTUS]
 Cactus
 
 [CACTUS_TOOLTIP]
-Shoots spikes that can pop balloons and does moderate damage
+Shoots spikes that can pop balloons
 
 [BLOVER]
 Blover
 
 [BLOVER_TOOLTIP]
-Blows away all in air zombies and fog
+Blows away all balloon zombies and fog
 
 [SPLIT_PEA]
-Splitter Pea
+Split Pea
 
 [SPLIT_PEA_TOOLTIP]
-Shoots peas forward and backwards, backwards peas split up and down
+Shoots peas forward and backwards
 
 [STARFRUIT]
 Starfruit
@@ -179,22 +179,22 @@ Starfruit
 Shoots stars in 5 directions
 
 [PUMPKIN]
-Pumpcar
+Pumpkin
 
 [PUMPKIN_TOOLTIP]
-Runs over the zombies, knocking them back
+Protects plants that are within its shell
 
 [MAGNET_SHROOM]
-Teleportree
+Magnet-shroom
 
 [MAGNET_SHROOM_TOOLTIP]
-Sends zombies back to the start, dispersing them into adjacent lanes
+Removes helmets and other metal objects from zombies
 
 [CABBAGE_PULT]
-Mortomato
+Cabbage-pult
 
 [CABBAGE_PULT_TOOLTIP]
-Hurls bouncy tomatoes
+Hurls cabbages at the enemy
 
 [FLOWER_POT]
 Flower Pot
@@ -203,17 +203,16 @@ Flower Pot
 Lets you plant on the roof
 
 [KERNEL_PULT]
-Egg-pult
+Kernel-pult
 
 [KERNEL_PULT_TOOLTIP]
-Flings light-damaging eggs and stinky rotten eggs
+Flings corn kernels and butter at zombies
 
 [GARLIC]
-Bell Pepper
+Garlic
 
 [GARLIC_TOOLTIP]
-Rings bell striking all zombies in a 7x5 area
-
+Diverts zombies into other lanes
 
 [UMBRELLA_LEAF]
 Umbrella Leaf
@@ -222,10 +221,10 @@ Umbrella Leaf
 Protects nearby plants from bungees and catapults
 
 [MARIGOLD]
-Dark Flower
+Marigold
 
 [MARIGOLD_TOOLTIP]
-Targets zombies in 3 lanes, ignores roof slope
+Gives you silver and gold coins
 
 [MELON_PULT]
 Melon-pult
@@ -255,7 +254,7 @@ Releases heavy fumes in an area around itself
 (requires fume-shroom)
 
 [CATTAIL]
-Aloe Pot
+Cattail
 
 [CATTAIL_TOOLTIP]
 Attacks any lane and shoots down balloon zombies
@@ -302,7 +301,7 @@ Coffee Bean
 Plant it on a mushroom to wake it up
 
 [EXPLODE_O_NUT]
-Explode-o-nut
+Explode-o-stachio
 
 [EXPLODE_O_NUT_TOOLTIP]
 Explodes on contact
@@ -314,7 +313,7 @@ Giant Wall-nut
 Sprout
 
 [MARIGOLD_SPROUT]
-Dark Flower Sprout
+Marigold Sprout
 
 [ZOMBIE]
 Zombie
@@ -335,19 +334,19 @@ Pole Vaulting Zombie
 Newspaper Zombie
 
 [SCREEN_DOOR_ZOMBIE]
-Nut Costume Zombie
+Screen Door Zombie
 
 [FOOTBALL_ZOMBIE]
 Football Zombie
 
 [DANCING_ZOMBIE]
-Disco Zombie
+Dancing Zombie
 
 [BACKUP_DANCER]
 Backup Dancer
 
 [DUCKY_TUBE_ZOMBIE]
-Lifeguard Zombie
+Ducky Tube Zombie
 
 [SNORKEL_ZOMBIE]
 Snorkel Zombie
@@ -368,7 +367,7 @@ Jack-in-the-Box Zombie
 Balloon Zombie
 
 [DIGGER_ZOMBIE]
-Mining Zombie
+Digger Zombie
 
 [POGO_ZOMBIE]
 Pogo Zombie
@@ -424,7 +423,7 @@ Sunflowers are essential for you to produce extra sun. Try planting as many as y
 life-giving jazzy rhythm of the Earth itself, thumping at a frequency only Sunflower can hear.
 
 [WALL_NUT_DESCRIPTION]
-Peastachio explodes into peas upon being eaten.
+Peastachios explode into peas upon being eaten.
 {SHORTLINE}
 {KEYWORD}Toughness:{STAT} high
 {SHORTLINE}
@@ -440,7 +439,6 @@ Sombrero Bean Bombs can blow up all zombies in an area. They have a short fuse s
 {FLAVOR}Since he has been deployed Sombrero Bean Bomb can't wait to explode.
 "When I finally get my hands on those zombies... THEY ARE GOING TO SAY ADIOS!"
 The other plants think he lost it a while ago.
-
 
 [POTATO_MINE_DESCRIPTION]
 Potato Mines pack a powerful punch, but they need a while to arm themselves. You should plant them ahead of zombies. They will explode on contact.
@@ -462,12 +460,12 @@ Repeaters fire two peas at a time.
 plant or zombie, and he shoots peas to keep people at a distance. Secretly, though, Repeater yearns for love.
 
 [SNOW_PEA_DESCRIPTION]
-Berry Peashooters shoot strawberries that deal splash damage.
+Berry Peas shoot strawberries that deal splash damage.
 {SHORTLINE}
 {KEYWORD}Damage:{STAT} normal, slows zombies
 {SHORTLINE}
-{FLAVOR}Folks often tell Snow Pea how "cool" he is, or exhort him to "chill out." They 
-tell him to "stay frosty." Snow Pea just rolls his eyes. He's heard 'em all.
+{FLAVOR}"I only recently left the advertisement industry" Berry Pea says, "I've fortunately beat the crave for attention thanks to my therapist. I'd consider this retirement, but it's more of a part-time charity considering the pay and the working hours.
+
 
 [CHOMPER_DESCRIPTION]
 Chompers can devour a zombie whole, but they are vulnerable while chewing.
@@ -491,7 +489,7 @@ Puff-shrooms are cheap, but can only fire a short distance.
 I'd just assumed they were fairy tales or movie monsters. This whole experience has been a huge eye-opener for me."
 
 [SUN_SHROOM_DESCRIPTION]
-Sunguses force the zombies to produce sun over time.
+Sun-shrooms give small sun at first and normal sun later.
 {SHORTLINE}
 {KEYWORD}Sun production:{STAT} low, then normal
 {NOCTURNAL}Sleeps during the day
@@ -519,12 +517,14 @@ Plant Grave Busters on graves to remove the graves.
 kittens and spends his off hours volunteering at a local zombie rehabilitation center. "It's just the right thing to do," he says.
 
 [HYPNO_SHROOM_DESCRIPTION]
-Pecanoliths spawn hypnotised zombies.
+When eaten, Hypno-shrooms will make a zombie turn around and fight for you.
 {SHORTLINE}
-{KEYWORD}Usage:{STAT} wall plant
+{KEYWORD}Usage:{STAT} single use, on contact
+{KEYWORD}Special:{STAT} makes a zombie fight for you
 {NOCTURNAL}Sleeps during the day
 {SHORTLINE}
-{FLAVOR}Pecanolith's childhood was a rough time. All the other nuts would call him names and carve things into him while he slept. The only place he feels at home is the graveyard.
+{FLAVOR}"Zombies are our friends," asserts Hypno-shroom. "They're badly misunderstood creatures 
+who play a valuable role in our ecology. We can and should do more to bring them round to our way of thinking."
 
 [SCAREDY_SHROOM_DESCRIPTION]
 Scaredy-shrooms are long-ranged shooters that hide when enemies get near them.
@@ -536,17 +536,17 @@ Scaredy-shrooms are long-ranged shooters that hide when enemies get near them.
 {FLAVOR}"Who's there?" whispers Scaredy-shroom, voice barely audible. "Go away. I don't want to see anybody. Unless it's the man from the circus."
 
 [ICE_SHROOM_DESCRIPTION]
-Weaken-shrooms take away a zombie's ability, and slows and damages them in a vegetable state.
+Ice-shrooms temporarily immobilize all zombies on the screen.
 {SHORTLINE}
-{KEYWORD}Damage:{STAT} medium
-{KEYWORD}Range:{STAT} single zombie
+{KEYWORD}Damage:{STAT} very light, immobilizes zombies
+{KEYWORD}Range:{STAT} all zombies on the screen
 {KEYWORD}Usage:{STAT} single use, instant
 {NOCTURNAL}Sleeps during the day
 {SHORTLINE}
-{FLAVOR}People love making jokes about how he's "a vegetable that makes zombies into vegetables" but they're wrong. Mushrooms aren't vegetables.
+{FLAVOR}Ice-shroom frowns, not because he's unhappy or because he disapproves, but because of a childhood injury that left his facial nerves paralyzed.
 
 [DOOM_SHROOM_DESCRIPTION]
-Doom-shrooms destroy everything.
+Doom-shrooms destroy everything in a large area and leave a crater that can't be planted on.
 {SHORTLINE}
 {KEYWORD}Damage:{STAT} massive
 {KEYWORD}Range:{STAT} all zombies in a huge area
@@ -575,13 +575,13 @@ Squashes will smash the first zombie that gets close to it.
 {FLAVOR}"I'm ready!" yells Squash. "Let's do it! Put me in! There's nobody better! I'm your guy! C'mon! Whaddya waiting for? I need this!"
 
 [THREEPEATER_DESCRIPTION]
-Robo-peas shoot homing peas with terrible aim.
+Threepeaters shoot peas in three lanes.
 {SHORTLINE}
-{KEYWORD}Damage:{STAT} normal
-{KEYWORD}Range:{STAT} whole board
+{KEYWORD}Damage:{STAT} normal (for each pea)
+{KEYWORD}Range:{STAT} three lanes
 {SHORTLINE}
-{FLAVOR}He's watched every terminator movie. Twice.
-
+{FLAVOR}Threepeater likes reading, backgammon and long periods of immobility in the park. Threepeater enjoys 
+going to shows, particularly modern jazz. "I'm just looking for that special someone," he says. Threepeater's favorite number is 5.
 
 [TANGLE_KELP_DESCRIPTION]
 Tangle Kelp are aquatic plants that pull the first zombie that nears them underwater.
@@ -614,7 +614,7 @@ Spikeweeds pop tires and hurt any zombies that step on them.
 players. And he consistently cleans up in the office hockey pool. Just one problem: he's terrified of pucks.
 
 [TORCHWOOD_DESCRIPTION]
-Torchwoods turn peas that pass through them into fireballs that deal twice as much damage. They also deal fire damage in a 3x3 area.
+Torchwoods turn peas that pass through them into fireballs that deal twice as much damage.
 {SHORTLINE}
 {KEYWORD}Special:{STAT} doubles the damage of peas that pass through it.  Fireballs deal damage to nearby zombies on impact
 {SHORTLINE}
@@ -622,32 +622,34 @@ Torchwoods turn peas that pass through them into fireballs that deal twice as mu
 for his ability to greatly maximize pea damage. But Torchwood has a secret: he can't read.
 
 [TALL_NUT_DESCRIPTION]
-Wax Gourds jump and hurt zombies.
+Tall-nuts are heavy-duty wall plants that can't be vaulted over.
 {SHORTLINE}
-{KEYWORD}Toughness:{STAT} high
-{KEYWORD}Special:{STAT} jumps for damage
-{KEYWORD}Special:{STAT} can block from flying zombies if triggered
+{KEYWORD}Toughness:{STAT} very high
+{KEYWORD}Special:{STAT} can't be vaulted or jumped over
 {SHORTLINE}
-{FLAVOR}"Everyone always asks me if I'm made out of wax." Wax Gourd says. "Just because it's in my
-name that doesn't mean I am made out of it." Little does he know he is in fact made out of wax.
+{FLAVOR}People wonder if there's a rivalry between Wall-nut and Tall-nut. Tall-nut laughs a rich, baritone 
+laugh. "How could there be anything between us? We are brothers. If you knew what Wall-nut has done for me..." 
+Tall-nut's voice trails off and he smiles knowingly.
 
 [SEA_SHROOM_DESCRIPTION]
-Shine-shrooms produce more sun the more aquatic plants you plant next to them.
+Sea-shrooms are aquatic plants that shoot short ranged spores.
 {SHORTLINE}
-{KEYWORD}Friends:{STAT} Lily Pad, Tangle Kelp, other Shine-shrooms
+{KEYWORD}Damage:{STAT} normal
+{KEYWORD}Range:{STAT} short
 {AQUATIC}Must be planted in water
 {NOCTURNAL}Sleeps during the day
 {SHORTLINE}
-{FLAVOR}Shine-shrooms have been an oddity in the scientific community for years. People wonder, how does it not electrocute itself when in the water? Crazy Dave, of course, hasn't thought about this.
+{FLAVOR}Sea-shroom has never seen the sea. It's in his name, he's heard loads about it, but he's just never found the time. One day, though, it'll go down.
 
 [PLANTERN_DESCRIPTION]
-Spotlight Shrooms shine light down their lane, letting you see through fog.
+Planterns light up an area, letting you see through fog.
 {SHORTLINE}
 {KEYWORD}Range:{STAT} one lane
 {KEYWORD}Special:{STAT} lets you see through fog
 {SHORTLINE}
-{FLAVOR}Spotlight Shroom used to work for the local theatre company. However, after realising that he can only shoot light in front of him,
-and to shine down he needed to precariously stand up top and look down, two hospital trips later and he was out the job forever.
+{FLAVOR}Plantern defies science. He just does. Other plants eat light and excrete oxygen; Plantern eats 
+darkness and excretes light. Plantern's cagey about how he does it. "I'm not gonna say 'sorcery,' I 
+wouldn't use the term 'dark forces,' I just... I think I've said enough."
 
 [CACTUS_DESCRIPTION]
 Cactuses shoot spikes that can hit both ground and air targets.
@@ -689,22 +691,26 @@ Starfruits shoot stars in 5 directions.
 I've got --count it-- ONE tooth! Four cavities in one tooth? How does this happen?"
 
 [PUMPKIN_DESCRIPTION]
-Pumpcars run over oncoming zombies, pushing them back
+Pumpkins protect plants that are within their shells.
 {SHORTLINE}
-{KEYWORD}Special:{STAT} can be planted over another plant and speeds off
+{KEYWORD}Toughness:{STAT} high
+{KEYWORD}Special:{STAT} can be planted over another plant
 {SHORTLINE}
-{FLAVOR}Wanted by the NZPD (neighborville zombie police department) for multiple counts of hit and runs
+{FLAVOR}Pumpkin hasn't heard from his cousin Renfield lately. Apparently Renfield's a big star, some kind 
+of... what was it... sports hero? Peggle Master? Pumpkin doesn't really get it. He just does his job.
 
 [MAGNET_SHROOM_DESCRIPTION]
-Teleportree Stumps teleport other zombies to each others locations.
+Magnet-shrooms remove helmets and other metal objects from zombies.
 {SHORTLINE}
-{KEYWORD}Range:{STAT} same tile
-{KEYWORD}Special:{STAT} teleports zombies to each other
+{KEYWORD}Range:{STAT} nearby zombies
+{KEYWORD}Special:{STAT} removes metal objects from zombies
+{NOCTURNAL}Sleeps during the day
 {SHORTLINE}
-{FLAVOR}Little known fact is that the reason Teleportrees can teleport to eachother is because they are all related. "It's like having a bunch of clones around you. It freaks me out sometimes" said Jim the Teleportree.
+{FLAVOR}Magnetism is a powerful force. Very powerful. Sometimes it scares Magnet-shroom a little. He's 
+not sure if he can handle that kind of responsibility.
 
 [CABBAGE_PULT_DESCRIPTION]
-Mortomatos hurl bouncy tomatoes at the zombies
+Cabbage-pults hurl cabbages at the enemy.
 {SHORTLINE}
 {KEYWORD}Damage:{STAT} normal
 {KEYWORD}Range:{STAT} lobbed
@@ -720,12 +726,14 @@ Flower Pots let you plant on the roof.
 {FLAVOR}"I'm a pot for planting. Yet I'm also a plant. HAS YOUR MIND EXPLODED YET?"
 
 [KERNEL_PULT_DESCRIPTION]
-Egg-pults fling eggs and rotten eggs at zombies.
+Kernel-pults fling corn kernels and butter at zombies.
 {SHORTLINE}
-{KEYWORD}Damage:{STAT} light (egg), poisonous (rotten egg)
+{KEYWORD}Damage:{STAT} light (kernel), normal (butter)
 {KEYWORD}Range:{STAT} lobbed
+{KEYWORD}Special:{STAT} butter immobilizes zombies
 {SHORTLINE}
-{FLAVOR}Egg-pult constantly gets bugged with the question of "What came first, the chicken or the egg-pult?".  Down inside, he knows this question is impossible to answer.
+{FLAVOR}Kernel-Pult is the eldest of the Pult brothers. Of the three of them, Kernel is the only one 
+who consistently remembers the others' birthdays. He bugs them about it a little, too.
 
 [COFFEE_BEAN_DESCRIPTION]
 Use Coffee Beans to wake up sleeping mushrooms.
@@ -737,13 +745,14 @@ Use Coffee Beans to wake up sleeping mushrooms.
 What thing? Whoa! Lions!" Yep, Coffee Bean sure does get excited.
 
 [GARLIC_DESCRIPTION]
-Bell Peppers damage zombies in a 5x5 area upon ringing their bell.
+Garlic diverts zombies into other lanes.
 {SHORTLINE}
-{KEYWORD}Range:{STAT} 5x5
-{KEYWORD}Special:{STAT} damages all zombies in range
+{KEYWORD}Usage:{STAT} on contact
+{KEYWORD}Special:{STAT} diverts zombies into other lanes
 {SHORTLINE}
-{FLAVOR}"You might think my life is hell" Bell Pepper explains. "And you would be right until a year ago, when I got ear removal surgery. Worth every penny."
-
+{FLAVOR}Lane-diversion isn't just Garlic's profession. It's his passion. He carries an advanced Doctorate 
+in Redirection from the Brussels University. He'll talk all day about lane vectors and repulse arrays. 
+He even pushes things into alternate avenues at home. Somehow his wife puts up with it.
 
 [UMBRELLA_LEAF_DESCRIPTION]
 Umbrella Leaves protect nearby plants from bungees and catapults.
@@ -754,14 +763,13 @@ Umbrella Leaves protect nearby plants from bungees and catapults.
 popping up to protect stuff around me. Yeah. Just like that. EXACTLY like that. Believe it."
 
 [MARIGOLD_DESCRIPTION]
-Dark Flowers can shoot in 3 lanes while ignoring the roof slope.
+Marigolds give you silver and gold coins.
 {SHORTLINE}
-{KEYWORD}Special:{STAT} ignores roof slope
-{KEYWORD}Special:{STAT} can fire in 3 lanes
+{KEYWORD}Special:{STAT} gives coins
 {SHORTLINE}
-{FLAVOR}Dark flower has very supportive parents. They didn't mind her dying her petals, 
-or her constantly claiming that she wasn't just "going through a phase", 
-because they knew what it was like to be a young blooming marigold.
+{FLAVOR}Marigold spends a lot of time deciding whether to spit out a silver coin or a gold one. She 
+thinks about it, weighs the angles. She does solid research and keeps up with current publications. 
+That's how winners stay ahead.
 
 [MELON_PULT_DESCRIPTION]
 Melon-pults do heavy damage to groups of zombies.
@@ -1100,30 +1108,28 @@ Dog Zombie description
 Propeller Zombie description
 
 [CRAZY_DAVE_201]
-Those zombies just won't let up, will they?
+Evening, {PLAYER_NAME}.
 [CRAZY_DAVE_202]
-You'll notice that fighting zombies at night is different than in the day.
+Those zombies just won't let up, will they?
 [CRAZY_DAVE_203]
-For one, you won't get any sun falling from the sky.
+You'll notice that fighting zombies at night is different than in the day.
 [CRAZY_DAVE_204]
-You can still get sun from sunflowers, though.
+For one, you won't get any sun falling from the sky.
 [CRAZY_DAVE_205]
-Also, not only is it night now, but...
+You can still get sun from sunflowers, though.
 [CRAZY_DAVE_206]
-I'm just saying, watch out for imps! {SCREAM}
-
-
+And lucky for you, you got yourself some puff-shrooms.
+[CRAZY_DAVE_207]
+Plant as many of those as you can and you'll be A-O-GOOD.
 
 [CRAZY_DAVE_301]
-SEE, WHOEVER YOU ARE, {PLAYER_NAME}, *NOT A SCAM*{SHAKE}{SCREAM}
+Hey, you found my car key!
 [CRAZY_DAVE_302]
-Right. Anyways, if we don't work together on this, the zombies will EAT OUR BRAINS!!
+You know what that means...
 [CRAZY_DAVE_303]
-So, Crazy Dave's Twiddydinkies is open for business! {MOUTH_SMALL_SMILE}
+Crazy Dave's Twiddydinkies is open for business! {MOUTH_SMALL_SMILE}
 [CRAZY_DAVE_304]
-Have a lookn't! See if you can't not find something you don't not like! {MOUTH_SMALL_SMILE}
-[CRAZY_DAVE_305]
-Oh, and about that fog thing... uhh that might stay there for a while...
+Have a look! See if you can't find something you like! {MOUTH_SMALL_SMILE}
 
 [CRAZY_DAVE_401]
 Ever play a game called Whack-a-Zombie?
@@ -1139,63 +1145,58 @@ Yeah, just like that, but instead of squirbos, it's zombies.
 And instead of ME, it's YOU! {MOUTH_BIG_SMILE} {SCREAM}
 
 [CRAZY_DAVE_501]
-Woah, we just had a heat wave, and now SNOW?? {MOUTH_BIG_SMILE} {SCREAM}
+Looks like the zombies gave up attacking your front yard.
 [CRAZY_DAVE_502]
-What's with this mortal forecast??
+Now they're trying your backyard.
 [CRAZY_DAVE_503]
-At least the zombies are gonna be chilly! {SCREAM2}
+And to top it all off, you can't even use your mushrooms!
 [CRAZY_DAVE_504]
-Also watch out, this snow means there's gonna be a flurry of 2 NEW ZOMBIES! {SCREAM}
+'cause they'll fall asleep during the day!
+[CRAZY_DAVE_505]
+Well isn't that just dandy!
 
 [CRAZY_DAVE_601]
-I've got a new upgrade in stock!
+YOU FOUND MY MAGIC TACO!! {SCREAM2}
 [CRAZY_DAVE_602]
-{SHOW_MONEYBAG}To celebrate this grand occasion, I'll give you $1000 to spend!
+{SHOW_MONEYBAG}I must have it! I'll give you $1000!
 [CRAZY_DAVE_603]
-Have a look!
-
-
+YES!  THE TACO IS MINE! {SCREAM}
+[CRAZY_DAVE_604]
+Why'd I give you so much money for a taco?
+[CRAZY_DAVE_605]
+{SHAKE}BECAUSE I'M CRAAAAZY!!!! {MOUTH_BIG_SMILE}
+[CRAZY_DAVE_606]
+Take a look around my shop! You'll notice I got some new items in stock!
 
 [CRAZY_DAVE_701]
-Hey, quick heads-up, CRAZY DAVE'S TWIDDYDINKIES IS NOW OPEN! {SHAKE}{SCREAM}{SCREAM2}
+Funny thing about the zombie process. Sometimes it makes 'em come out real little.
 [CRAZY_DAVE_702]
-COME FOR *NEW* BARGAINS THAT WILL PROBABLY BE FREE!! {SCREAM}
+Real little and REAL MEAN!
 [CRAZY_DAVE_703]
-what? a scam?
-[CRAZY_DAVE_704]
-{SHAKE}HEY YOU, YES YOU BRIAN OVER THERE, COME GET *FREE* STUFF, LIKE POOL CLEANERS!!
-[CRAZY_DAVE_705]
-Oh, sorry, I don't have time to deal with complainers like you, {PLAYER_NAME}, I've got customers to serve
-[CRAZY_DAVE_706]
-Well enjoy my FOG O MAJIG that I installed on your lawn, see, *FOR FREE*!!!! {SHAKE}{SCREAM2}
-
+Defend your shins! {SCREAM}
 
 [CRAZY_DAVE_801]
-It's raining outside, and I also heard some thunder earlier!
+You know, they used to call me "Fog Man"
 [CRAZY_DAVE_802]
-THIS IS THE CALM BEFORE THE STORM! {MOUTH_SMALL_SMILE}{SCREAM2}{SHAKE}!
-
+'cause I would hang out in the fog and JUMP OUT AT PEOPLE! {MOUTH_BIG_SMILE}
+[CRAZY_DAVE_803]
+Ah, those were the days. {MOUTH_SMALL_SMILE}
 
 [CRAZY_DAVE_1101]
-The zombies asked me to help them practice invading houses.
+Why'd it get so dark all of a sudden?
 [CRAZY_DAVE_1102]
-I told them it'd be okay as long as no plants were harmed.
+This can't be good.
 [CRAZY_DAVE_1103]
-So, I put a bunch of cardboard cut-outs on your lawn.
-[CRAZY_DAVE_1104]
-Have fun!
-
+Oh well, hope you survive the night!
 
 [CRAZY_DAVE_1201]
-Looks like those zombies really hated your house.
+Whoa! They even found a way onto your roof!
 [CRAZY_DAVE_1202]
-So luckily you managed to escape all the harm!
+Those are some persistent zombies, dude.
 [CRAZY_DAVE_1203]
-Unfortunately, the zombies are attacking my emporium too!
+You'll need to use cabbage-pults here due to your roof's angle.
 [CRAZY_DAVE_1204]
-Just remember: there's no soil here, so make sure to use your pots!
-[CRAZY_DAVE_1205]
-If you hold off the zombies for me, I may be able to give you some nifty upgrades for your seed bank!
+Remember that, and you're good to go!
 
 [CRAZY_DAVE_1301]
 Zen Garden is pretty nifty, huh?
@@ -1223,12 +1224,7 @@ A-Whoop-a-dee-doo! Here come those idiots now!
 [CRAZY_DAVE_1401]
 Hey, you've collected {MONEY} in coins so far!
 [CRAZY_DAVE_1402]
-And it's time for a minigame!
-[CRAZY_DAVE_1403]
-It's Whack-a-zombie!
-[CRAZY_DAVE_1404]
-So uhh... go Whack a zombie then!!!
-
+When you collect {UPGRADE_COST}, I'll sell you something really neat-o!
 
 [CRAZY_DAVE_1501]
 Hey! Wanna buy an extra seed slot?
@@ -1268,13 +1264,13 @@ I choose... these three!
 {NO_CLICK}I'll give you ${SELL_PRICE}0 for that {PLANT_TYPE}!
 
 [CRAZY_DAVE_2000]
-{NO_SOUND}{NO_CLICK}The sun upgrade lets you start with 25 extra sun in the bank!
+{NO_SOUND}{NO_CLICK}Plant these on your repeaters to turn them into gatling peas! Gatling peas shoot four peas at a time!
 
 [CRAZY_DAVE_2001]
-{NO_SOUND}{NO_CLICK}The BIG MONEY (r) upgrade lets you earn DOUBLE the money from coins! {SHAKE}
+{NO_SOUND}{NO_CLICK}Plant these on your sunflowers to turn them into twin sunflowers! Twin sunflowers give twice as much sun as a sunflower!
 
 [CRAZY_DAVE_2002]
-{NO_SOUND}{NO_CLICK}The Zombi-gone upgrade makes the first zombie take longer to come out!
+{NO_SOUND}{NO_CLICK}Plant these on your fume-shrooms to turn them into gloom-shrooms! Gloom-shrooms do rapid attacks in a small area!
 
 [CRAZY_DAVE_2003]
 {NO_SOUND}{NO_CLICK}Plant these on your lily pads to turn them into cattails! Cattails can attack any lane and take down balloon zombies!
@@ -1446,10 +1442,11 @@ Why'd I put a wall-nut in your hand?{MOUTH_SMALL_OH}
 NOW GO! BOWL ME A WINNER!{MOUTH_BIG_SMILE} {SCREAM}
 
 [CRAZY_DAVE_2500]
-What? Who turned off the lights??
+Me and my buddy Harvey Flaxcaster used to break vases when we were bored.
 [CRAZY_DAVE_2501]
-Well, it seems to be past my bedtime so you're gonna have to fend off the incoming zombies!
-
+Well Harvey's outta town, so you're coming with me, Harvey #2!
+[CRAZY_DAVE_2502]
+BREAK IT LIKE YOU MEAN IT, HARVEY! {SCREAM}
 
 [CRAZY_DAVE_2600]
 Hey, welcome to the Zen Garden section of my shop!
@@ -1556,7 +1553,7 @@ Good job!
 Current Streak: {STREAK}
 
 [ADVICE_CLICK_ON_SUN]
-Click on sun to pick it up!
+Click on the falling sun to collect it!
 
 [ADVICE_GRAVEBUSTERS_ON_GRAVES]
 Grave busters can only be planted on graves
@@ -1641,10 +1638,10 @@ the faster you can grow plants!
 The shovel needs time to refresh before digging again
 
 [ADVICE_HUGE_WAVE]
-A HUGE WAVE OF ZOMBIES IS APPROACHING!
+A HUGE WAVE OF ZOMBIES IS APPROACHING!                 
 
 [ADVICE_CLICK_PEASHOOTER]
-
+Click on the peashooter to plant another one!
 
 [ADVICE_PLANT_SUNFLOWER1]
 Sunflowers are an extremely important plant!
@@ -2301,7 +2298,7 @@ Beghouled
 Beghouled Twist
 
 [WALL_NUT_BOWLING]
-                   Wall-nut Bowling
+Wall-nut Bowling
 
 [GRAVE_DANGER]
 Grave Danger
@@ -3050,7 +3047,7 @@ Click to resume to continue.
 Resume
 
 [INTRO_PRESENTS]
-Plantverse Team Presents...
+PopCap Games Presents
 
 [CANT_USE_CODE]
 You don't have a tall enough Tree of Wisdom for that!
@@ -3074,218 +3071,26 @@ Replay level?
 [REPLAY_LEVEL_BODY]
 Do you wish to replay level 3-4?
 
+[ADVICE_CONE_WAVE]
+SPECIAL WAVE - CONE COMPANY!
+
+[ADVICE_HUNGRY_WAVE]
+SPECIAL WAVE - HUNGRY ZOMBIES!
+
+[ADVICE_HUNGRY_WAVE]
+SPECIAL WAVE - HUNGRY ZOMBIES!
+
+[ADVICE_ULTRA_WAVE]
+AN ULTRA WAVE OF ZOMBIES IS APPROACHING!
+
 [CRAZY_DAVE_4000]
-Woah, look at that sunset! {SCREAM}
+Seems like your neighbours are digging up their lawn!
 [CRAZY_DAVE_4001]
-Doesn't stop the zombies though.
-[CRAZY_DAVE_4002]
-Guess you will be getting the sad sun then.
+Watch out for falling bushes!
 
 [CRAZY_DAVE_4050]
-Did you see that! {SCREAM}
+Wow! It's really sunny today!
 [CRAZY_DAVE_4051]
-A zombie just spawned out of the ground! {SCREAM}
-
-
-
-[CRAZY_DAVE_4100]
-Greetings, I'm Crazy Dave.
-[CRAZY_DAVE_4101]
-Zombie-killing botanist crazy guy! {SCREAM}
-[CRAZY_DAVE_4102]
-Here's some advice for this adventure, {PLAYER_NAME}.
-[CRAZY_DAVE_4103]
-The bar that will appear in the bottom right is...
-[CRAZY_DAVE_4104]
-THE COMBO BAR! {SCREAM}
-[CRAZY_DAVE_4105]
-The more zombies you kill...
-[CRAZY_DAVE_4106]
-The higher the bar goes...
-[CRAZY_DAVE_4107]
-AND THE FASTER THE ZOMBIES GO! {SCREAM}
-
-[CRAZY_DAVE_4150]
-WOAH! Looks like the zombies are having a disco! {SCREAM}
-[CRAZY_DAVE_4151]
-Where can I get involved?
-
-[CRAZY_DAVE_4200]
-Looks like it's raining.
-[CRAZY_DAVE_4201]
-Last time I saw this, zombies were slipping and sliding all over the place! {SCREAM}
-
-
-[CRAZY_DAVE_4250]
-Woah, it's so hot out here!
-[CRAZY_DAVE_4251]
-Your plants are gonna need to be careful!
-[CRAZY_DAVE_4252]
-They can't do much work by themselves, so mash the space bar to motivate them!
-[CRAZY_DAVE_4253]
-Just make sure to not let them overheat!
-[CRAZY_DAVE_4254]
-Also you can move your plants, just click them and move!
-[CRAZY_DAVE_4255]
-Good luck, I'm gonna head inside! {SCREAM}
-
-[CRAZY_DAVE_4300]
-Looks like the zombies gave up attacking your front yard.
-[CRAZY_DAVE_4301]
-Now they're trying your backyard.
-[CRAZY_DAVE_4302]
-And to top it all off, you can't even use your mushrooms!
-[CRAZY_DAVE_4303]
-'cause they'll fall asleep during the day!
-[CRAZY_DAVE_4304]
-Well isn't that just dandy!
-
-[CRAZY_DAVE_4350]
-Oh no, the seed-o-majig got stuck! {SCREAM2} {SHAKE}
-[CRAZY_DAVE_4351]
-The vital machine used for giving you new seeds! {SCREAM}
-[CRAZY_DAVE_4352]
-Well, I only have like 4 of each left, you will have to use what you have! {MOUTH_SMALL_SMILE}
-
-[CRAZY_DAVE_4400]
-...
-[CRAZY_DAVE_4401]
-Yea I honestly can't explain this at all?
-[CRAZY_DAVE_4402]
-Zombie magic?
-[CRAZY_DAVE_4403]
-Yea, let's go with this, this has more questions than answers...
-
-[CRAZY_DAVE_4500]
-All this think fog is surrounding me!
-[CRAZY_DAVE_4501]
-I think I might start coughing...
-
-[CRAZY_DAVE_4550]
-Um...
-[CRAZY_DAVE_4551]
-I think the zombies poisoned the pool?
-[CRAZY_DAVE_4552]
-I hope the poor plants don't get sick! {SCREAM2}{SHAKE}
-
-[CRAZY_DAVE_4600]
-Where are all the plants?
-[CRAZY_DAVE_4601]
-Well, lucky for you, you can see some tape I've put down there!
-[CRAZY_DAVE_4602]
-When the time is right, and the zombies are there, press your space bar-majig to nuke 'em!
-[CRAZY_DAVE_4603]
-How are they getting there? Attract them with this brain, but make sure they don't eat the thing!
-[CRAZY_DAVE_4604]
-And remember, get 5 or more of 'em at once to get an extra sunflower inc. zombi-gone nuke!{SMILE}
-
-[CRAZY_DAVE_4650]
-I've got some flowers here on the lawn.
-[CRAZY_DAVE_4651]
-Just make sure not to let the zombies trample all over them!{SMILE}
-
-
-
-[ADVICE_HUGE_STORM2]
-A HUGE STORM IS COMING...
-
-
-
-
-[ACH_DISCO]
-Achievement - Chorophobia
-[ACH_TRICKSHOT]
-Achievement - Famous Last Words
-[ACH_TIME]
-Achievement - Time Travel!!??
-[ACH_LIFEGUARD]
-Achievement - OOPS
-[ACH_BUNGEE]
-Achievement - Organic Trojan
-[ACH_YETI]
-Achievement - Zombotologist
-[ACH_SUNNY]
-Achievement - Golden Age
-[ACH_CARCRASH]
-Achievement - Pumpkin Dispatch
-
-[CRAZY_DAVE_4700]
-This new Shooting Star fell from the sky!
-[CRAZY_DAVE_4701]
-I'm going to need to get you to protect it for now! {SCREAM}{SHAKE}
-
-[CRAZY_DAVE_4750]
-Huh? Why's the sky gone all red?
-[CRAZY_DAVE_4751]
-This can't be good.
-
-[CRAZY_DAVE_4800]
-Looks like the zombies have made it onto your roof... somehow.
-[CRAZY_DAVE_4801]
-Sadly, because of this slope on your roof, most plants can't shoot past it!
-[CRAZY_DAVE_4802]
-I wonder if some plants like Cactus can extend up...
-[CRAZY_DAVE_4803]
-Or Mortomato's tomatoes could bounce up.
-[CRAZY_DAVE_4804]
-I wonder! {SCREAM}{SHAKE}{SMILE}
-
-[WARNING_2_MINS]
-2 MINUTES LEFT!
-
-[WARNING_1_MIN]
-1 MINUTE LEFT!
-
-[WARNING_10_SEC]
-10 SECONDS LEFT!
-
-[ESCAPE]
-Escape
-
-[ADVICE_SHOVEL]
-You can use the shovel to brutally kill the plants!
-
-[ADVICE_HUGE0]
-A MARCHING ARMY OF THE UNDEAD IS APPROACHING!
-
-[ADVICE_HUGE1]
-A HUGE WAVE OF ZOMBIES IS APPROACHING!
-
-[ADVICE_HUGE2]
-A SMALL BUT MODERATELY POWERFUL£WAVE OF ZOMBIES IS APPROACHING!
-
-[ADVICE_HUGE3]
-A WAVE BIGGER THAN YOUR MOTHER£OF ZOMBIES IS APPROACHING!
-
-[ADVICE_HUGE4]
-A WAVE SO BIG THE PERSON BEHIND THIS TEXT£RIGHT HERE FORGOT HOW LONG THIS WAS GOING TO BE£ AND THEREFORE HOW BIG THE WAVE IS!
-
-[ADVICE_HUGE5]
-A DEFINITELY NOT TINY WAVE£OF ZOMBIES IS APPROACHING!
-
-[ADVICE_HUGE6]
-A HUGE WAVE OF ENTER ZOMBIEMAN IS ABOUT TO HAPPEN!
-
-[ADVICE_HUGE7]
-A MIGHTY WAVE OF UNDEAD BEASTS IS APPROACHING!
-
-[ADVICE_HUGE8]
-WE ARE NOT LYING! ££ A SMALL WAVE OF ZOMBIES IS APPROACHING!
-
-[ADVICE_HUGE9]
-A TSUNAMI OF ZOMBIES IS APPROACHING!£OKAY, MAYBE NOT THAT BIG...
-
-[ADVICE_HUGE:]
-THE APPROACHING OF THE HUGE WAVE OF ZOMBIES WILL£COME SHORTLY!
-
-[ADVICE_HUGE;]
-AND NOW TIME FOR A COMMERCIA- WAIT WHAT??£MORE ZOMBIES???
-
-[ADVICE_HUGE<]
-A GIANT WAVE OF ZOMBIES IS COMING TO SEEK AND£DESTROY YOUR BRAINS!
-
-[ADVICE_HUGE=]
-THE ARITHMETICAL MEAN AMOUNT OF ZOMBIES£IS APPROACHING!
-
-
-
+More sun means more zombies though!
+[CRAZY_DAVE_4052]
+Maybe use some sunblock! {SCREAM} {SHAKE}

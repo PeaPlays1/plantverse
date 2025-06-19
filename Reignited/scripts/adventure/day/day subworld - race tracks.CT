@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="42">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>11</ID>
+      <Description>"level attributes"</Description>
+      <Options moManualExpandCollapse="1" moActivateChildrenAsWell="1" moDeactivateChildrenAsWell="1"/>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>8</ID>
+          <Description>"0"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>0043C190</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>1</ID>
+          <Description>"3"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>00796404</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>4</ID>
+          <Description>"4"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>00796405</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>9</ID>
+          <Description>"5"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>00796406</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>10</ID>
+          <Description>"6"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>00796407</Address>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>21</ID>
+      <Description>"script"</Description>
+      <Options moActivateChildrenAsWell="1" moDeactivateChildrenAsWell="1"/>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>2</ID>
+          <Description>"background"</Description>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+00797717: //this is allocated memory, you have read,write,execute access
+//place your code here
+pushad
+call 007966E3
+cmp eax,03
+je level1
+cmp eax,04
+je level2
+cmp eax,05
+je level3
+cmp eax,06
+je level4
+popad
+jmp originalcode
+
+level1:
+popad
+mov ebx,[700274]
+jmp 00416323
+
+level2:
+popad
+mov ebx,[700278]
+jmp 00416323
+
+level3:
+popad
+mov ebx,[70027C]
+jmp 00416323
+
+level4:
+popad
+mov ebx,[700280]
+jmp 00416323
+
+originalcode:
+mov ebx,[006A77C4]
+
+exit:
+jmp returnhere
+
+4162DB:
+jmp 00797717
+nop
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+4162DB:
+db 8B 1D C4 77 6A 00
+//mov ebx,[006A77C4]
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>3</ID>
+          <Description>"zombo speed"</Description>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+00797783: //this is allocated memory, you have read,write,execute access
+//place your code here
+cmp [esi+24],0
+je yes
+cmp [esi+24],2
+jne originalcode
+yes:
+
+pushad
+call 007966E3
+cmp eax,03
+je lane1
+cmp eax,04
+je lane2
+cmp eax,05
+je lane4
+cmp eax,06
+je lane6
+popad
+jne originalcode
+
+
+
+
+//1-5
+
+lane1:
+popad
+cmp [esi+1C],1
+jne originalcode
+cmp [esi+80],5
+jl return
+jmp speed
+
+
+
+//1-6
+
+lane2:
+popad
+cmp [esi+1C],2
+jne lane3
+cmp [esi+80],7
+jl return
+jmp speed
+
+lane3:
+cmp [esi+1C],4
+jne originalcode
+cmp [esi+80],5
+jl return
+jmp speed
+
+//1-7
+
+lane4:
+popad
+cmp [esi+1C],1
+jne lane5
+cmp [esi+80],5
+jl return
+jmp speed
+
+lane5:
+cmp [esi+1C],3
+jne originalcode
+cmp [esi+80],5
+jl return
+jmp speed
+
+//1-8
+
+lane6:
+popad
+cmp [esi+1C],0
+jne lane7
+cmp [esi+80],6
+jl return
+jmp speed
+
+lane7:
+cmp [esi+1C],4
+jne lane8
+cmp [esi+80],6
+jl return
+jmp speed
+
+lane8:
+cmp [esi+1C],2
+jne originalcode
+
+
+
+
+
+
+
+
+
+speed:
+pushad
+mov [esi+34],(float)2
+call 52F050
+popad
+jmp originalcode
+
+
+
+return:
+cmp [esi+34],(float)2
+jne originalcode
+pushad
+mov eax,esi
+call 524A70
+popad
+
+
+
+
+
+
+
+
+originalcode:
+cmp dword ptr [esi+24],08
+jne PlantsVsZombies.Zombie::UpdateActions+11B
+
+exit:
+jmp returnhere
+
+
+
+
+
+
+
+
+
+52B21E:
+jmp 00797783
+nop
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+52B21E:
+db 83 7E 24 08 75 07
+//cmp dword ptr [esi+24],08
+//jne PlantsVsZombies.Zombie::UpdateActions+11B
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>13</ID>
+          <Description>"no spawns in the middle until first wave"</Description>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+007978D3: //this is allocated memory, you have read,write,execute access
+//place your code here
+pushad
+call 007966E3
+cmp eax,06
+popad
+jne originalcode
+cmp [esi+557C],5
+jge originalcode
+cmp edi,02
+jne originalcode
+fst dword ptr [esi+000006A8]
+jmp 0040DD6D
+
+originalcode:
+cmp eax,15
+jne PlantsVsZombies.Board::PickRowForNewZombie+B8
+
+exit:
+jmp returnhere
+
+40DCED:
+jmp 007978D3
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+40DCED:
+cmp eax,15
+jne PlantsVsZombies.Board::PickRowForNewZombie+B8
+//Alt: db 83 F8 15 75 16
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>19</ID>
+          <Description>"spawn meta increase"</Description>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+00797913: //this is allocated memory, you have read,write,execute access
+//place your code here
+pushad
+call 007966E3
+cmp eax,06
+popad
+jne originalcode
+cmp [006FFFC8],5
+jle originalcode
+mov eax,80000000
+mul ebx
+jmp 0040974F
+
+
+
+
+
+originalcode:
+mov eax,55555556
+
+exit:
+jmp returnhere
+
+409748:
+jmp 00797913
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+409748:
+mov eax,55555556
+//Alt: db B8 56 55 55 55
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>20</ID>
+          <Description>"Auto Assemble script"</Description>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+00797947: //this is allocated memory, you have read,write,execute access
+//place your code here
+mov [006FFFC8],ebx
+
+originalcode:
+push ebx
+mov edx,edi
+mov [ecx+edi+000006B4],FFFFFFFF
+
+exit:
+jmp returnhere
+
+409505:
+jmp 00797947
+nop 9
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+409505:
+push ebx
+mov edx,edi
+mov [ecx+edi+000006B4],FFFFFFFF
+//Alt: db 53 8B D7 C7 84 39 B4 06 00 00 FF FF FF FF
+</AssemblerScript>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>14</ID>
+      <Description>"1"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>6A3834</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>17</ID>
+      <Description>"1"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>6A3B64</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>16</ID>
+      <Description>"wave count"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>6A3504</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>18</ID>
+      <Description>"miniboss music"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>Byte</VariableType>
+      <Address>0045B81D</Address>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>

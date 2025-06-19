@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="45">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>28</ID>
+      <Description>"script"</Description>
+      <Options moActivateChildrenAsWell="1" moDeactivateChildrenAsWell="1"/>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>2</ID>
+          <Description>"check flag wave"</Description>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+00796AAC: //this is allocated memory, you have read,write,execute access
+//place your code here
+pushad
+mov eax,[6a9ec0]
+mov eax,[eax+768]
+mov ebx,[eax+557C]
+mov eax,[eax+5550]
+sub eax,1
+//sub ebx,1
+
+
+movzx ecx,[796330+eax]
+//sub ecx,1
+
+
+mov eax,ebx
+sub eax,1
+cdq
+idiv ecx
+cmp edx,0
+jne end
+
+
+mov ecx,[eax*4+00700400]
+
+
+mov [00700430],ecx
+
+
+
+end:
+
+
+
+popad
+
+originalcode:
+cmp dword ptr [eax+000007F8],2B
+
+exit:
+jmp returnhere
+
+415D9F:
+jmp 00796AAC
+nop 2
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+415D9F:
+db 83 B8 F8 07 00 00 2B
+//cmp dword ptr [eax+000007F8],2B
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>3</ID>
+          <Description>"cone wave"</Description>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+00796B01: //this is allocated memory, you have read,write,execute access
+//place your code here
+cmp [700430],03
+jne next
+push str1
+jmp exit
+
+
+next:
+cmp [700430],04
+jne next1
+push str2
+jmp exit
+
+next1:
+cmp [700430],05
+jne originalcode
+push str3
+jmp exit
+
+
+
+originalcode:
+push 006566B8
+
+exit:
+jmp returnhere
+
+str1:
+db '[ADVICE_CONE_WAVE]' 00
+
+str2:
+db '[ADVICE_HUNGRY_WAVE]' 00
+
+str3:
+db '[ADVICE_ULTRA_WAVE]' 00
+
+413F7F:
+jmp 00796B01
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+413F7F:
+db 68 B8 66 65 00
+//push 006566B8
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>4</ID>
+          <Description>"cone wave spawn"</Description>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+00796B8D: //this is allocated memory, you have read,write,execute access
+//place your code here
+pushad
+push [edi+557C]
+mov edx,edi
+call 409080
+test al,al
+popad
+je originalcode
+
+cmp [700430],03
+jne next
+pushad
+mov ebp,1
+
+
+loop:
+cmp ebp,5
+jg end
+pushad
+mov eax,[6a9ec0]
+mov eax,[eax+768]
+push 2
+call 40DC50
+push eax
+push 2
+mov eax,[6a9ec0]
+mov eax,[eax+768]
+call 40DDC0
+popad
+add ebp,1
+jmp loop
+
+end:
+popad
+jmp originalcode
+
+
+
+next:
+cmp [700430],04
+jne originalcode
+pushad
+mov ebp,1
+
+
+loop1:
+cmp ebp,8
+jg end1
+pushad
+mov eax,[6a9ec0]
+mov eax,[eax+768]
+push 0
+call 40DC50
+push eax
+push 0
+mov eax,[6a9ec0]
+mov eax,[eax+768]
+call 40DDC0
+mov [eax+34],(float)1
+mov esi,eax
+call 52F050
+popad
+add ebp,1
+jmp loop1
+
+end1:
+popad
+jmp originalcode
+
+
+
+
+
+
+
+originalcode:
+add esi,01
+add dword ptr [edi+00005580],01
+
+exit:
+jmp returnhere
+
+4130B4:
+jmp 00796B8D
+nop 5
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+4130B4:
+db 83 C6 01 83 87 80 55 00 00 01
+//add esi,01
+//add dword ptr [edi+00005580],01
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>5</ID>
+          <Description>"dave texts"</Description>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+
+007960E0:
+dd 0
+dd 0
+dd 0
+dd 0
+dd 0
+dd #4000
+dd 0
+dd 0
+dd #4050
+dd 0
+
+dd 0
+dd 0
+dd 0
+dd 0
+dd 0
+dd 0
+dd 0
+dd 0
+dd 0
+dd 0
+
+dd 0
+dd 0
+dd 0
+dd 0
+dd 0
+dd 0
+dd 0
+dd 0
+dd 0
+dd 0
+
+dd 0
+dd 0
+dd 0
+dd 0
+dd 0
+dd 0
+dd 0
+dd 0
+dd 0
+dd 0
+
+dd 0
+dd 0
+dd 0
+dd 0
+dd 0
+dd 0
+dd 0
+dd 0
+dd 0
+dd 0
+
+dd 0
+dd 0
+dd 0
+dd 0
+dd 0
+dd 0
+dd 0
+dd 0
+dd 0
+dd 0
+
+
+
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>6</ID>
+          <Description>"dave text check"</Description>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+00796C62: //this is allocated memory, you have read,write,execute access
+//place your code here
+
+
+
+pushad
+mov eax,[6a9ec0]
+mov eax,[eax+82C]
+mov eax,[eax+24]
+sub eax,1
+cmp [eax*4+7960E0],00
+je end
+mov ebx,[eax*4+7960E0]
+mov [ebp+28],ebx
+popad
+jmp 43AF14
+
+
+
+
+
+
+
+end:
+popad
+
+
+
+
+/*cmp dword ptr [edx+24],1//level id 1-1
+jne originalcode1
+mov [ebp+28],#4000 //words on 4000
+jmp 43AF14*/
+
+
+originalcode:
+mov ecx,esi
+call 453920
+
+exit:
+jmp returnhere
+
+43ADEB:
+jmp 00796C62
+nop 2
+returnhere:
+
+
+
+
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+43ADEB:
+mov ecx,esi
+call PlantsVsZombies.exe+53920
+//Alt: db 8B CE E8 2E 8B 01 00
+
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>21</ID>
+          <Description>"dave pos"</Description>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+00796CA1: //this is allocated memory, you have read,write,execute access
+//place your code here
+pushad
+mov eax,[6a9ec0]
+cmp [eax+840],0
+je end
+mov [eax+30],#134
+
+
+
+end:
+popad
+
+originalcode:
+mov eax,ebp
+call 0040EAB0
+
+exit:
+jmp returnhere
+
+415D92:
+jmp 00796CA1
+nop 2
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+415D92:
+db 8B C5 E8 17 8D FF FF
+//mov eax,ebp
+//call 0040EAB0
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>22</ID>
+          <Description>"sunny day level"</Description>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+00796CCA: //this is allocated memory, you have read,write,execute access
+//place your code here
+pushad
+call 007966E3
+cmp eax,02
+popad
+je 413BDF
+
+
+
+originalcode:
+cmp dword ptr [ecx+000007F8],25
+
+exit:
+jmp returnhere
+
+413BD1:
+jmp 00796CCA
+nop 2
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+413BD1:
+db 83 B9 F8 07 00 00 25
+//cmp dword ptr [ecx+000007F8],25
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>24</ID>
+          <Description>"increased spawn meta for module 2"</Description>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+00796CE7: //this is allocated memory, you have read,write,execute access
+//place your code here
+pushad
+call 007966E3
+cmp eax,02
+popad
+je 00409962
+
+originalcode:
+cmp dword ptr [eax+24],2D
+je 00409962
+
+exit:
+jmp returnhere
+
+409948:
+jmp 00796CE7
+nop
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+409948:
+db 83 78 24 2D 74 14
+//cmp dword ptr [eax+24],2D
+//je 00409962
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>26</ID>
+          <Description>"special final flag"</Description>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+00796D07: //this is allocated memory, you have read,write,execute access
+//place your code here
+cmp [700430],05
+jne originalcode
+fmul qword ptr [006797E0]
+
+
+originalcode:
+fmul qword ptr [006797E0]
+
+exit:
+jmp returnhere
+
+40977C:
+jmp 00796D07
+nop
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+40977C:
+db DC 0D E0 97 67 00
+//fmul qword ptr [006797E0]
+</AssemblerScript>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>23</ID>
+      <Description>"attribute 2"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>Byte</VariableType>
+      <Address>00796408</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>25</ID>
+      <Description>"special flag 2"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>Byte</VariableType>
+      <Address>00796021</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>27</ID>
+      <Description>"5"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>Byte</VariableType>
+      <Address>00796339</Address>
+    </CheatEntry>
+  </CheatEntries>
+  <CheatCodes>
+    <CodeEntry>
+      <Description>Change of mov eax,[ecx+0000008C]</Description>
+      <AddressString>PlantsVsZombies.exe+1C1C0</AddressString>
+      <Before>
+        <Byte>CC</Byte>
+        <Byte>CC</Byte>
+        <Byte>CC</Byte>
+        <Byte>CC</Byte>
+        <Byte>CC</Byte>
+      </Before>
+      <Actual>
+        <Byte>8B</Byte>
+        <Byte>81</Byte>
+        <Byte>8C</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Actual>
+      <After>
+        <Byte>8B</Byte>
+        <Byte>80</Byte>
+        <Byte>F8</Byte>
+        <Byte>07</Byte>
+        <Byte>00</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of mov eax,[ecx+0000008C]</Description>
+      <AddressString>PlantsVsZombies.exe+1C1C0</AddressString>
+      <Before>
+        <Byte>CC</Byte>
+        <Byte>CC</Byte>
+        <Byte>CC</Byte>
+        <Byte>CC</Byte>
+        <Byte>CC</Byte>
+      </Before>
+      <Actual>
+        <Byte>8B</Byte>
+        <Byte>81</Byte>
+        <Byte>8C</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Actual>
+      <After>
+        <Byte>8B</Byte>
+        <Byte>80</Byte>
+        <Byte>F8</Byte>
+        <Byte>07</Byte>
+        <Byte>00</Byte>
+      </After>
+    </CodeEntry>
+  </CheatCodes>
+  <UserdefinedSymbols/>
+</CheatTable>

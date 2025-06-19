@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="45">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>10</ID>
+      <Description>"scripts"</Description>
+      <Options moActivateChildrenAsWell="1" moDeactivateChildrenAsWell="1"/>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>8</ID>
+          <Description>"function"</Description>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+
+796F09: //this is allocated memory, you have read,write,execute access
+//place your code here
+mov eax,[6a9EC0]
+cmp [eax+768],0
+je return
+mov eax,[eax+768]
+cmp [eax+5550],2
+jle return
+mov al,1
+ret
+
+
+
+
+
+
+
+return:
+xor al,al
+ret
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>0</ID>
+          <Description>"Draw Fire Bar"</Description>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+00796F36: //this is allocated memory, you have read,write,execute access
+//place your code here
+pushad
+call 00796F09
+cmp al,1
+popad
+jne originalcode
+push eax
+mov eax,[6a9ec0]
+mov eax,[eax+768]
+mov eax,[eax+5778]
+mov [700500],eax
+pop eax
+
+
+
+cmp [700500],#127
+jge fullbar
+
+pushad
+push [00700500]
+push #18
+
+mov eax,[00700500]
+mov ecx,#550
+sub ecx,eax
+push ecx
+
+pushad
+sub ecx,#11
+push ecx
+push #900
+mov ebx,[700270]
+mov eax,ebp
+call 587150
+popad
+
+
+
+push #904
+mov edi,[0070026C]
+mov eax,ebp
+call 587520
+popad
+
+jmp originalcode
+
+
+
+
+
+fullbar:
+pushad
+push #127
+push #18
+
+mov eax,#127
+mov ecx,#550
+sub ecx,eax
+push ecx
+
+pushad
+sub ecx,#11
+push ecx
+push #900
+mov ebx,[700270]
+mov eax,ebp
+call 587150
+popad
+
+
+
+push #904
+mov edi,[0070026C]
+mov eax,ebp
+call 587520
+popad
+
+
+
+originalcode:
+
+pushad
+push #410
+push #900
+mov ebx,[00700268]
+mov eax,ebp
+call 587150
+popad
+
+
+call PlantsVsZombies.Board::HasProgressMeter
+
+exit:
+jmp returnhere
+
+41752F:
+jmp 00796F36
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+41752F:
+db E8 8C FE FF FF
+//call PlantsVsZombies.Board::HasProgressMeter
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>2</ID>
+          <Description>"Add To Fire Bar"</Description>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+00797013: //this is allocated memory, you have read,write,execute access
+//place your code here
+pushad
+call 00796F09
+cmp al,1
+popad
+jne originalcode
+cmp [00700510],0
+jle next
+pushad
+mov eax,[6a9ec0]
+mov eax,[eax+768]
+mov eax,[eax+5568]
+cdq
+mov ecx,#10
+idiv ecx
+cmp edx,0
+popad
+jne next
+sub [00700510],1
+//add [00700500],1
+push eax
+mov eax,[6a9ec0]
+mov eax,[eax+768]
+add [eax+5778],1
+pop eax
+
+
+
+next:
+push eax
+mov eax,[6a9ec0]
+mov eax,[eax+768]
+cmp [eax+5778],0
+pop eax
+jle originalcode
+pushad
+mov eax,[6a9ec0]
+mov eax,[eax+768]
+mov eax,[eax+5568]
+cdq
+mov ecx,#100
+idiv ecx
+cmp edx,0
+popad
+jne originalcode
+push eax
+mov eax,[6a9ec0]
+mov eax,[eax+768]
+sub [eax+5778],1
+pop eax
+cmp [00700500],#130
+jl originalcode
+push eax
+mov eax,[6a9ec0]
+mov eax,[eax+768]
+sub [eax+5778],1
+sub [eax+5778],1
+sub [eax+5778],1
+sub [eax+5778],1
+pop eax
+
+
+
+
+
+
+
+originalcode:
+mov eax,[ebp+00005578]
+
+exit:
+jmp returnhere
+
+415EB7:
+jmp 00797013
+nop
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+415EB7:
+db 8B 85 78 55 00 00
+//mov eax,[ebp+00005578]
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>3</ID>
+          <Description>"EB"</Description>
+          <ShowAsHex>1</ShowAsHex>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>0040D190</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>5</ID>
+          <Description>"Add To Counter When Die"</Description>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+0079710B: //this is allocated memory, you have read,write,execute access
+//place your code here
+pushad
+call 00796F09
+cmp al,1
+popad
+jne originalcode
+cmp [edi+28],8
+je originalcode
+cmp [edi+28],10
+je originalcode
+cmp [edi+6C],-2
+je originalcode
+add [00700510],#10
+
+
+
+
+
+originalcode:
+mov byte ptr [edi+000000EC],01
+
+exit:
+jmp returnhere
+
+530602:
+jmp 0079710B
+nop 2
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+530602:
+db C6 87 EC 00 00 00 01
+//mov byte ptr [edi+000000EC],01
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>6</ID>
+          <Description>"Speed"</Description>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+0079714C: //this is allocated memory, you have read,write,execute access
+//place your code here
+pushad
+call 00796F09
+cmp al,1
+popad
+jne originalcode
+cmp [00700500],#127
+jge next
+fild dword ptr [00700500]
+fmul dword ptr [fl]
+fadd dword ptr [esi+34]
+fstp dword ptr [esi+34]
+jmp originalcode
+
+next:
+fild dword ptr [fl2]
+fmul dword ptr [fl]
+fadd dword ptr [esi+34]
+fstp dword ptr [esi+34]
+jmp originalcode
+
+originalcode:
+fcomp qword ptr [00679658]
+
+exit:
+jmp returnhere
+
+fl:
+dd (float)0.00094488
+
+fl2:
+db #127
+
+524BAA:
+jmp 0079714C
+nop
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+524BAA:
+db DC 1D 58 96 67 00
+//fcomp qword ptr [00679658]
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>7</ID>
+          <Description>"Reset increased Fire"</Description>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+007971A8: //this is allocated memory, you have read,write,execute access
+//place your code here
+mov [00700510],0
+
+originalcode:
+mov [ebp+00005538],ebx
+
+exit:
+jmp returnhere
+
+407F5A:
+jmp 007971A8
+nop
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+407F5A:
+db 89 9D 38 55 00 00
+//mov [ebp+00005538],ebx
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>9</ID>
+          <Description>"Add On Huge Wave"</Description>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+007971BE: //this is allocated memory, you have read,write,execute access
+//place your code here
+add [00700510],#50
+
+
+
+originalcode:
+lea ecx,[esp+10]
+call 00404450
+
+exit:
+jmp returnhere
+
+413F84:
+jmp 007971BE
+nop 4
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+413F84:
+db 8D 4C 24 10 E8 C3 04 FF FF
+//lea ecx,[esp+10]
+//call 00404450
+</AssemblerScript>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>1</ID>
+      <Description>"fire bar value"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>00700500</Address>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>

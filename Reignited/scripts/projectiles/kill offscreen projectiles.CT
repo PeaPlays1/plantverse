@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="45">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>0</ID>
+      <Description>"kill projectiles"</Description>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+//code from here to '[DISABLE]' will be used to enable the cheat
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+00796EBE: //this is allocated memory, you have read,write,execute access
+//place your code here
+cmp [ebp+58],7
+je 0046CF74
+
+originalcode:
+mov ecx,[ebp+5C]
+cmp ecx,07
+
+exit:
+jmp returnhere
+
+46CF6C:
+jmp 00796EBE
+nop
+returnhere:
+
+
+ 
+ 
+[DISABLE]
+//code from here till the end of the code will be used to disable the cheat
+dealloc(newmem)
+46CF6C:
+db 8B 4D 5C 83 F9 07
+//mov ecx,[ebp+5C]
+//cmp ecx,07
+</AssemblerScript>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>
