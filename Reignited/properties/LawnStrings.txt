@@ -1433,9 +1433,9 @@ Ok goody, now for the surprise...
 [CRAZY_DAVE_2411]
 We're going BOWLING!{MOUTH_SMALL_SMILE}
 [CRAZY_DAVE_2412]
-{SHOW_WALLNUT}HERE, TAKE THIS WALL-NUT!!
+{SHOW_WALLNUT}HERE, TAKE THIS PEASTACHIO!!
 [CRAZY_DAVE_2413]
-Why'd I put a wall-nut in your hand?{MOUTH_SMALL_OH}
+Why'd I put a peastachio in your hand?{MOUTH_SMALL_OH}
 [CRAZY_DAVE_2414]
 {SHAKE}Because I'm CRAAAZY!!!!!{MOUTH_BIG_SMILE}
 [CRAZY_DAVE_2415]
@@ -3084,13 +3084,8 @@ SPECIAL WAVE - HUNGRY ZOMBIES!
 AN ULTRA WAVE OF ZOMBIES IS APPROACHING!
 
 [CRAZY_DAVE_4000]
-Seems like your neighbours are digging up their lawn!
-[CRAZY_DAVE_4001]
-Watch out for falling bushes!
+fire bar place the holder
+
 
 [CRAZY_DAVE_4050]
-Wow! It's really sunny today!
-[CRAZY_DAVE_4051]
-More sun means more zombies though!
-[CRAZY_DAVE_4052]
-Maybe use some sunblock! {SCREAM} {SHAKE}
+zombie track place the holder
