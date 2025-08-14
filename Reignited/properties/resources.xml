@@ -92,7 +92,7 @@
 <Image id="SEEDPACKETSILHOUETTE" path="SeedPacketSilhouette" />
 <Image id="FLAGMETER" path="FlagMeter" rows="2" minsubdivide="" />
 <Image id="FLAGMETERLEVELPROGRESS" path="FlagMeterLevelProgress" />
-<Image id="FLAGMETERPARTS" path="FlagMeterParts" cols="6" />
+<Image id="FLAGMETERPARTS" path="FlagMeterParts" cols="7" />
 <Image id="TROPHY" path="trophy" />
 <Image id="TROPHY_HI_RES" path="trophy_hi_res" />
 <Image id="MINIGAME_TROPHY" path="Minigame_trophy" />
@@ -231,6 +231,17 @@
 <Image id="NEW17" path="new17" />
 <Image id="NEW18" path="new18" />
 <Image id="NEW19" path="new19" />
+<Image id="NEW20" path="new20" />
+<Image id="NEW21" path="new21" />
+<Image id="NEW22" path="new22" />
+<Image id="NEW23" path="new23" />
+<Image id="NEW24" path="new24" />
+<Image id="NEW25" path="new25" />
+<Image id="NEW26" path="new26" />
+<Image id="NEW27" path="new27" />
+<Image id="NEW28" path="new28" />
+<Image id="NEW29" path="new29" />
+
 
 <!-- Zombies -->
 <Image id="ZOMBIE_BOBSLED1" path="Zombie_bobsled1" />
@@ -600,6 +611,9 @@
 <Sound id="FINALFANFARE" path="finalfanfare" />
 <Sound id="CRAZYDAVESCREAM" path="crazydavescream" />
 <Sound id="CRAZYDAVESCREAM2" path="crazydavescream2" />
+<Sound id="CHACHING" path="chaching" />
+<Sound id="AMBIENTDAY" path="ambientday" />
+<Sound id="AMBIENTNIGHT" path="ambientnight" />
 
 </Resources>
 

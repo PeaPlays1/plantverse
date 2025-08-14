@@ -53,10 +53,10 @@ Puff-shroom
 Shoots short-ranged spores at the enemy
 
 [SUN_SHROOM]
-Sun-shroom
+Sungus
 
 [SUN_SHROOM_TOOLTIP]
-Gives small sun at first and normal sun later
+Makes a zombie produce sun over time
 
 [FUME_SHROOM]
 Fume-shroom
@@ -489,13 +489,12 @@ Puff-shrooms are cheap, but can only fire a short distance.
 I'd just assumed they were fairy tales or movie monsters. This whole experience has been a huge eye-opener for me."
 
 [SUN_SHROOM_DESCRIPTION]
-Sun-shrooms give small sun at first and normal sun later.
+Sunguses force the zombies to produce sun over time.
 {SHORTLINE}
-{KEYWORD}Sun production:{STAT} low, then normal
+{KEYWORD}Sun production:{STAT} high
 {NOCTURNAL}Sleeps during the day
 {SHORTLINE}
-{FLAVOR}Sun-shroom hates sun. He hates it so much that when it builds up in his system, 
-he spits it out as fast as he can. He just won't abide it. To him, sun is crass.
+{FLAVOR}Sungus loves to be in the spotlight more than the average shroom, so much so he even changed his legal name to stand out, and instead of being a 'shroom, is a 'gus. "I just can't help it! The looks, the invitations, the free samples!!!" Sungus justifies itself.
 
 [FUME_SHROOM_DESCRIPTION]
 Fume-shrooms shoot fumes that can pass through screen doors.
@@ -3084,8 +3083,31 @@ SPECIAL WAVE - HUNGRY ZOMBIES!
 AN ULTRA WAVE OF ZOMBIES IS APPROACHING!
 
 [CRAZY_DAVE_4000]
-fire bar place the holder
+Hey neighbor! Zombies still pestering you, huh?
+[CRAZY_DAVE_4001]
+Whatever happened to our peace treaty?
+[CRAZY_DAVE_4002]
+Goes to show you can never trust those zombies...
+[CRAZY_DAVE_4003]
+Like when I hired one to fix my chimney!
+[CRAZY_DAVE_4004]
+They broke it worse than the treaty!
+[CRAZY_DAVE_4005]
+Anyway, I'm here to warn you of what they're up to now.
+[CRAZY_DAVE_4006]
+See that little thingamajig on the right?
+[CRAZY_DAVE_4007]
+Basically, the more zombies you kill, the higher it rises.
+[CRAZY_DAVE_4008]
+And the higher it is, the faster them zombies go!
+[CRAZY_DAVE_4009]
+Keep an eye on it! You don't want more zombies than you can handle.
+[CRAZY_DAVE_4010]
+Good luck dealing with those pesky traitors! 
 
 
 [CRAZY_DAVE_4050]
 zombie track place the holder
+
+[ADIVCE_GRAVE_WAVE]
+AN UNDEAD SUMMONING IS APPROACHING!
