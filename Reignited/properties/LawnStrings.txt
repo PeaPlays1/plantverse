@@ -47,10 +47,10 @@ Chomper
 Devours a zombie whole, but is vulnerable while chewing
 
 [PUFF_SHROOM]
-Puff-shroom
+Cluster-shroom
 
 [PUFF_SHROOM_TOOLTIP]
-Shoots short-ranged spores at the enemy
+Has a longer shooting range when it is placed around other Cluster-shrooms
 
 [SUN_SHROOM]
 Sungus
