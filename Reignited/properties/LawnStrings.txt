@@ -29,10 +29,10 @@ Repeater
 Fires two peas at a time
 
 [POTATO_MINE]
-Potato Mine
+Frynamine
 
 [POTATO_MINE_TOOLTIP]
-Explodes on contact, but takes time to arm itself
+Explodes on contact, releasing explosive fries into the air
 
 [SNOW_PEA]
 Berry Pea
