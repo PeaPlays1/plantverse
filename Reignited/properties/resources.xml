@@ -92,7 +92,7 @@
 <Image id="SEEDPACKETSILHOUETTE" path="SeedPacketSilhouette" />
 <Image id="FLAGMETER" path="FlagMeter" rows="2" minsubdivide="" />
 <Image id="FLAGMETERLEVELPROGRESS" path="FlagMeterLevelProgress" />
-<Image id="FLAGMETERPARTS" path="FlagMeterParts" cols="7" />
+<Image id="FLAGMETERPARTS" path="FlagMeterParts" cols="8" />
 <Image id="TROPHY" path="trophy" />
 <Image id="TROPHY_HI_RES" path="trophy_hi_res" />
 <Image id="MINIGAME_TROPHY" path="Minigame_trophy" />
@@ -241,6 +241,27 @@
 <Image id="NEW27" path="new27" />
 <Image id="NEW28" path="new28" />
 <Image id="NEW29" path="new29" />
+<Image id="NEW30" path="new30" />
+<Image id="NEW31" path="new31" />
+<Image id="NEW32" path="new32"/>
+<Image id="NEW33" path="new33" />
+<Image id="NEW34" path="new34" />
+<Image id="NEW35" path="new35" />
+<Image id="NEW36" path="new36" />
+<Image id="NEW37" path="new37" />
+<Image id="NEW38" path="new38" />
+<Image id="NEW39" path="new39" />
+<Image id="NEW40" path="new40" />
+<Image id="NEW41" path="new41" />
+<Image id="NEW42" path="new42" />
+<Image id="NEW43" path="new43" />
+<Image id="NEW44" path="new44" />
+<Image id="NEW45" path="new45" />
+<Image id="NEW46" path="new46" />
+<Image id="NEW47" path="new47" />
+<Image id="NEW48" path="new48" />
+<Image id="NEW49" path="new49" />
+<Image id="NEW3:" path="new50" />
 
 
 <!-- Zombies -->

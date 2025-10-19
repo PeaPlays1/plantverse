@@ -11,10 +11,10 @@ Sunflower
 Gives you additional sun
 
 [CHERRY_BOMB]
-Sombrero Bean Bomb
+Jalapeno
 
 [CHERRY_BOMB_TOOLTIP]
-Blows up all zombies in an area
+Destroys an entire lane of zombies
 
 [WALL_NUT]
 Peastachio
@@ -35,10 +35,10 @@ Frynamine
 Explodes on contact, releasing explosive fries into the air
 
 [SNOW_PEA]
-Berry Pea
+Deflectodil
 
 [SNOW_PEA_TOOLTIP]
-Shoots chilled berries that deal splash damage and slow the enemy
+Deflects projectiles back at zombies
 
 [CHOMPER]
 Chomper
@@ -328,7 +328,7 @@ Conehead Zombie
 Buckethead Zombie
 
 [POLE_VAULTING_ZOMBIE]
-Pole Vaulting Zombie
+Pitcher Zombie
 
 [NEWSPAPER_ZOMBIE]
 Newspaper Zombie
@@ -2177,7 +2177,7 @@ GAME OVER
 Survival
 
 [PICK_CHALLENGE]
-Mini-Games
+Settings
 
 [ONE_MORE_CHALLENGE_TOOLTIP]
 Complete 1 more mini-game to unlock
