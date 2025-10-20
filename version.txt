@@ -1,1 +1,3 @@
-added baseball zombie
+plantverse changelog:
+- fixed zombies walking into house
+- fixed music bug
