@@ -1,3 +1,4 @@
 plantverse changelog:
 - fixed zombies walking into house
 - fixed music bug
+- fixed cached sound
